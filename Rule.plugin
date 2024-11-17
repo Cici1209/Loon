@@ -7864,6 +7864,11 @@ DOMAIN-SUFFIX,qweather.com,DIRECT
 # 咒术回战
 DOMAIN-SUFFIX,listdl.com,DIRECT
 
+# 未知保留
+DOMAIN,sdk.open.talk.getui.net,DIRECT
+DOMAIN,mozilla.cloudflare-dns.com,DIRECT
+DOMAIN,analytics.immersivetranslate.com,DIRECT
+
 DOMAIN,analytics.strava.com,DIRECT
 DOMAIN,app.adjust.com,DIRECT
 DOMAIN,bdtj.tagtic.cn,DIRECT
@@ -9369,14 +9374,23 @@ IP-CIDR,69.53.224.0/19,GlobalMedia,no-resolve
 IP-CIDR,8.41.4.0/24,GlobalMedia,no-resolve
 # ---------------------------------------
 # Global
-# Loon插件或未知保留
+# 未知保留
 DOMAIN,api.revenuecat.com,Global
+DOMAIN-SUFFIX,whatshub.top,Global
+
+# Loon插件
 DOMAIN-SUFFIX,nsloon.com,Global
 DOMAIN-SUFFIX,kelee.one,Global
-DOMAIN-SUFFIX,whatshub.top,Global
 
 # Google 旗下
 DOMAIN-SUFFIX,app-analytics-services.com,Global
+
+# 网站 whois
+DOMAIN,www.whois.com,Global
+
+# 机场 WgetCloud
+DOMAIN-SUFFIX,vd9rjmh8z49uq28pcdmn.wgetcloud.online,Global
+
 
 DOMAIN,steambroadcast.akamaized.net,Global
 DOMAIN,steamcdn-a.akamaihd.net,Global
