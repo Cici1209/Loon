@@ -7869,7 +7869,6 @@ DOMAIN-SUFFIX,qweather.com,DIRECT
 DOMAIN-SUFFIX,listdl.com,DIRECT
 
 # > 未知保留
-DOMAIN,sdk.open.talk.getui.net,DIRECT
 DOMAIN,mozilla.cloudflare-dns.com,DIRECT
 DOMAIN,analytics.immersivetranslate.com,DIRECT
 
@@ -9378,13 +9377,13 @@ IP-CIDR,69.53.224.0/19,GlobalMedia,no-resolve
 IP-CIDR,8.41.4.0/24,GlobalMedia,no-resolve
 # ---------------------------------------
 # Global
-# > 未知保留
-DOMAIN,api.revenuecat.com,Global
-DOMAIN-SUFFIX,whatshub.top,Global
+# > 飞鸟云
+DOMAIN-SUFFIX,feiniaoyun.xyz,Global
 
 # > Loon插件
 DOMAIN-SUFFIX,nsloon.com,Global
 DOMAIN-SUFFIX,kelee.one,Global
+DOMAIN-SUFFIX,whatshub.top,Global
 
 # > Google 旗下
 DOMAIN-SUFFIX,app-analytics-services.com,Global
