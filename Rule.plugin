@@ -2,7 +2,7 @@
 #!desc=自用Loon规则
 #!author=Cici
 #!homepage=https://github.com/Cici1209/Loon/
-#!raw-url=https://github.com/Cici1209/Loon/Rule.plugin
+#!raw-url=https://github.com/Cici1209/Loon/blob/main/Rule.plugin
 
 ########################################################
 DOMAIN-SUFFIX,appsflyersdk.com,TikTok
