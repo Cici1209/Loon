@@ -5,7 +5,7 @@
 #!raw-url=https://raw.githubusercontent.com/Cici1209/Loon/refs/heads/main/Rule.plugin
 
 ########################################################
-DOMAIN-SUFFIX,appsflyersdk.com,TikTok
+DOMAIN-SUFFIX, appsflyersdk.com, TikTok
 DOMAIN-SUFFIX,byteoversea.com,TikTok
 DOMAIN-SUFFIX,ibytedtos.com,TikTok
 DOMAIN-SUFFIX,ipstatp.com,TikTok
@@ -18,3 +18,7 @@ DOMAIN-SUFFIX,tik-tokapi.com,TikTok
 DOMAIN-SUFFIX,tiktokcdn.com,TikTok
 DOMAIN-SUFFIX,tiktokv.com,TikTok
 DOMAIN-SUFFIX,tokapi.com,TikTok
+
+DOMAIN, youtubei.googleapis.com, YouTube
+DOMAIN,yt3.ggpht.com,YouTube
+DOMAIN-KEYWORD, youtube, YouTube
