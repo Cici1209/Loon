@@ -3,6 +3,7 @@
 #!author=Cici_WongYS
 
 [Rule]
+DOMAIN-KEYWORD,xns,NovaXNS
 
 # 广告拦截
 # > 屏蔽iOS更新
