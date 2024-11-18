@@ -5,9 +5,6 @@
 [Rule]
 
 # 广告拦截
-# > 防止应用循环请求
-IP-CIDR,0.0.0.0/32,REJECT,no-resolve
-
 # > 屏蔽iOS更新
 DOMAIN,gdmf.apple.com,REJECT
 DOMAIN,xp.apple.com,REJECT
