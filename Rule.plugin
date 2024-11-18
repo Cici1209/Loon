@@ -8878,6 +8878,7 @@ IP-CIDR6,fd00::/8,DIRECT,no-resolve
 IP-CIDR6,fe80::/10,DIRECT,no-resolve
 
 # 剩余未匹配的国内网站
+DOMAIN-SUFFIX,.cn,DIRECT
 DOMAIN-SUFFIX,cn,DIRECT
 # ---------------------------------------
 # AI
