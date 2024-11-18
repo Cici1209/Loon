@@ -5,12 +5,17 @@
 [Rule]
 # 广告拦截
 # > 防止应用循环请求
-#IP-CIDR,0.0.0.0/32,REJECT,no-resolve
-#DOMAIN-SUFFIX,localhost,REJECT
+IP-CIDR,0.0.0.0/32,REJECT,no-resolve
+DOMAIN-SUFFIX,localhost,REJECT
 
 # > 屏蔽iOS更新
 DOMAIN,gdmf.apple.com,REJECT
 DOMAIN,xp.apple.com,REJECT
+
+# > 小红书
+DOMAIN,crash.xiaohongshu.com,REJECT
+DOMAIN,referee.xiaohongshu.com,REJECT
+DOMAIN,fp-it.fengkongcloud.com,REJECT
 
 DOMAIN,adsbdfs.heytapimage.com,REJECT
 DOMAIN,adsfs.heytapimage.com,REJECT
