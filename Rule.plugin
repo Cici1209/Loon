@@ -8876,6 +8876,9 @@ IP-CIDR6,2a0b:b583::/48,DIRECT,no-resolve
 IP-CIDR6,fc00::/7,DIRECT,no-resolve
 IP-CIDR6,fd00::/8,DIRECT,no-resolve
 IP-CIDR6,fe80::/10,DIRECT,no-resolve
+
+# 剩余未匹配的国内网站
+DOMAIN-SUFFIX,cn,DIRECT
 # ---------------------------------------
 # AI
 DOMAIN,browser-intake-datadoghq.com,AI
@@ -15442,8 +15445,4 @@ IP-CIDR,91.108.0.0/16,Global,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,Global,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,Global,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,Global,no-resolve
-# ---------------------------------------
-# 剩余未匹配的国内网站
-DOMAIN-SUFFIX,cn,DIRECT
-DOMAIN-KEYWORD,-cn,DIRECT
 # ---------------------------------------
