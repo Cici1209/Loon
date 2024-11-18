@@ -7885,7 +7885,7 @@ DOMAIN-KEYWORD,baidupcs,DIRECT
 DOMAIN-KEYWORD,bilibili,DIRECT
 DOMAIN-KEYWORD,ccgslb,DIRECT
 DOMAIN-KEYWORD,chinacache,DIRECT
-DOMAIN-KEYWORD,-cn,DIRECT
+
 DOMAIN-KEYWORD,duobao,DIRECT
 DOMAIN-KEYWORD,jdpay,DIRECT
 DOMAIN-KEYWORD,moke,DIRECT
@@ -8055,7 +8055,7 @@ DOMAIN-SUFFIX,clientservices.googleapis.com,DIRECT
 DOMAIN-SUFFIX,clouddn.com,DIRECT
 DOMAIN-SUFFIX,cloudxns.net,DIRECT
 DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
-DOMAIN-SUFFIX,cn,DIRECT
+
 DOMAIN-SUFFIX,cn163.net,DIRECT
 DOMAIN-SUFFIX,cnbeta.com,DIRECT
 DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
@@ -15442,4 +15442,8 @@ IP-CIDR,91.108.0.0/16,Global,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,Global,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,Global,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,Global,no-resolve
+# ---------------------------------------
+# 剩余未匹配的国内网站
+DOMAIN-SUFFIX,cn,DIRECT
+DOMAIN-KEYWORD,-cn,DIRECT
 # ---------------------------------------
