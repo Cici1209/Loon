@@ -7877,10 +7877,6 @@ IP-CIDR,60.190.139.164/32,REJECT
 # > Uni Dream
 DOMAIN-SUFFIX,guangzhuiyuan.com,DIRECT
 
-# > 薯条插件-iRingo:WeatherKit
-DOMAIN-SUFFIX,api.caiyunapp.com,DIRECT
-DOMAIN-SUFFIX,qweather.com,DIRECT
-
 DOMAIN,analytics.strava.com,DIRECT
 DOMAIN,app.adjust.com,DIRECT
 DOMAIN,bdtj.tagtic.cn,DIRECT
@@ -8951,6 +8947,10 @@ DOMAIN-SUFFIX,gateway.icloud.com,Apple
 
 # > 薯条插件-iRingo:Maps
 DOMAIN-SUFFIX,dispatcher.is.autonavi.com,Apple
+
+# > 薯条插件-iRingo:WeatherKit
+DOMAIN-SUFFIX,api.caiyunapp.com,Apple
+DOMAIN-SUFFIX,qweather.com,Apple
 
 # > 薯条插件-iRingo:Siri
 DOMAIN,api.smoot.apple.cn,Apple
