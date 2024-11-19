@@ -22,7 +22,7 @@ IP-CIDR,103.150.8.98/32,DIRECT,no-resolve
 IP-CIDR,45.141.139.16/32,DIRECT,no-resolve
 IP-CIDR,148.178.21.17/32,DIRECT,no-resolve
 #DOMAIN-KEYWORD,xns,NovaXNS
-DOMAIN-SUFFIX,cdn.skypack.dev,NovaXNS
+#DOMAIN-SUFFIX,cdn.skypack.dev,NovaXNS
 
 # > CloudFlare
 DOMAIN-SUFFIX,cloudflare.com,CloudFlare
