@@ -46,9 +46,6 @@ DOMAIN,crash.xiaohongshu.com,REJECT
 DOMAIN,referee.xiaohongshu.com,REJECT
 DOMAIN,fp-it.fengkongcloud.com,REJECT
 
-# 在此新增
-DOMAIN,sofire.baidu.com,REJECT
-
 DOMAIN,adsbdfs.heytapimage.com,REJECT
 DOMAIN,adsfs.heytapimage.com,REJECT
 DOMAIN,adsmind.apdcdn.tc.qq.com,REJECT
