@@ -5,7 +5,7 @@
 [Rule]
 # DNS
 # > NovaXNS
-#DOMAIN-KEYWORD,xns,NovaXNS
+DOMAIN-KEYWORD,xns,NovaXNS
 
 # > CloudFlare
 DOMAIN-SUFFIX,cloudflare.com,CloudFlare
