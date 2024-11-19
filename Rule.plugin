@@ -6682,6 +6682,7 @@ DOMAIN-SUFFIX,um.hd.sohu.com,REJECT
 DOMAIN-SUFFIX,um5xcgngmart.xyz,REJECT
 DOMAIN-SUFFIX,umeng.co,REJECT
 DOMAIN-SUFFIX,umeng.com,REJECT
+DOMAIN-SUFFIX,umengcloud.com,REJECT
 DOMAIN-SUFFIX,umid.orion.meizu.com,REJECT
 DOMAIN-SUFFIX,umini.shujupie.com,REJECT
 DOMAIN-SUFFIX,umrstfl.cn,REJECT
@@ -8571,7 +8572,7 @@ DOMAIN-SUFFIX,tuniu.com,DIRECT
 DOMAIN-SUFFIX,tuniucdn.com,DIRECT
 DOMAIN-SUFFIX,ucweb.com,DIRECT
 DOMAIN-SUFFIX,udache.com,DIRECT
-DOMAIN-SUFFIX,umengcloud.com,DIRECT
+#DOMAIN-SUFFIX,umengcloud.com,DIRECT
 DOMAIN-SUFFIX,unrealengine.com,DIRECT
 DOMAIN-SUFFIX,upaiyun.com,DIRECT
 DOMAIN-SUFFIX,update.googleapis.com,DIRECT
