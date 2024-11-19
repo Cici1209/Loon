@@ -1,0 +1,19 @@
+#!name = NovaXNS-DoH
+#!desc = 使用 NovaXNS DNS-over-HTTPS (DoH)
+
+[General]
+# 跟随出口模式，避免 DNS 泄露
+dns-follows-outbound = true
+# 禁用 SVCB 解析
+disable-dns-svcb = true
+# 备用 DNS 服务器列表
+dns-server = 223.5.5.5, 119.29.29.29
+
+# iOS 系统专用的 DoH 服务器
+[DNS]
+https://hk.pro.xns.one/73NDp8D6_0E/wong/dns-query
+https://nexus.novaxns.one/73NDp8D6_0E/wong/dns-query
+
+[Host]
+# 自定义 Host 配置
+miwifi.com = 192.168.31.1
