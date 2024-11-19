@@ -1,0 +1,12 @@
+#!name = NovaXNS-DoH
+#!desc = 使用 NovaXNS DNS-over-HTTPS (DoH)
+
+[General]
+doh-follow-outbound-mode = true
+allow-dns-svcb = false
+dns-server = 119.29.29.29, 223.5.5.5
+#!REQUIREMENT "SYSTEM=='iOS'" 
+encrypted-dns-server = %APPEND% h3://hk.pro.xns.one/73NDp8D6_0E/wong/dns-query,https://nexus.novaxns.one/73NDp8D6_0E/wong/dns-query
+
+[Host]
+miwifi.com = 192.168.31.1
