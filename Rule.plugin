@@ -5,24 +5,22 @@
 [Rule]
 # DNS
 # > NovaXNS
-DOMAIN-SUFFIX,beta.xns.one,NovaXNS
-DOMAIN-SUFFIX,kahkee.xns.one,NovaXNS
-DOMAIN-SUFFIX,raito.xns.one,NovaXNS
+DOMAIN-SUFFIX,beta.xns.one,DIRECT
+DOMAIN-SUFFIX,kahkee.xns.one,DIRECT
+DOMAIN-SUFFIX,raito.xns.one,DIRECT
 DOMAIN-SUFFIX,pro.xns.one,NovaXNS
-DOMAIN-SUFFIX,novaxns.one,NovaXNS
-DOMAIN-SUFFIX,xns.rodeo,NovaXNS
-DOMAIN-SUFFIX,xns.my.id,NovaXNS
-DOMAIN-SUFFIX,nxns.link,NovaXNS
-DOMAIN-SUFFIX,xns.one,NovaXNS
-IP-CIDR,8.217.246.48/32,NovaXNS,no-resolve
-IP-CIDR,45.249.245.247/32,NovaXNS,no-resolve
-IP-CIDR,172.93.220.162/32,NovaXNS,no-resolve
-IP-CIDR,206.237.31.237/32,NovaXNS,no-resolve
-IP-CIDR,103.150.8.98/32,NovaXNS,no-resolve
-IP-CIDR,45.141.139.16/32,NovaXNS,no-resolve
-IP-CIDR,148.178.21.17/32,NovaXNS,no-resolve
-#DOMAIN-KEYWORD,xns,NovaXNS
-#DOMAIN-SUFFIX,cdn.skypack.dev,NovaXNS
+DOMAIN-SUFFIX,novaxns.one,DIRECT
+DOMAIN-SUFFIX,xns.rodeo,DIRECT
+DOMAIN-SUFFIX,xns.my.id,DIRECT
+DOMAIN-SUFFIX,nxns.link,DIRECT
+DOMAIN-SUFFIX,xns.one,DIRECT
+IP-CIDR,8.217.246.48/32,DIRECT,no-resolve
+IP-CIDR,45.249.245.247/32,DIRECT,no-resolve
+IP-CIDR,172.93.220.162/32,DIRECT,no-resolve
+IP-CIDR,206.237.31.237/32,DIRECT,no-resolve
+IP-CIDR,103.150.8.98/32,DIRECT,no-resolve
+IP-CIDR,45.141.139.16/32,DIRECT,no-resolve
+IP-CIDR,148.178.21.17/32,DIRECT,no-resolve
 
 # > CloudFlare
 DOMAIN-SUFFIX,cloudflare.com,CloudFlare
