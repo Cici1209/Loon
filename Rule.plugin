@@ -53,6 +53,30 @@ IP-CIDR,190.93.240.0/20,CloudFlare,no-resolve
 IP-CIDR,197.234.240.0/22,CloudFlare,no-resolve
 IP-CIDR,198.41.128.0/17,CloudFlare,no-resolve
 # ---------------------------------------
+# 薯条插件@iRingo：Location
+DOMAIN,gspe1-ssl.ls.apple.com,DIRECT
+
+# 薯条插件@iRingo：Maps
+DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
+DOMAIN,dispatcher.is.autonavi.com,DIRECT
+DOMAIN,direction2.is.autonavi.com,DIRECT
+
+DOMAIN,configuration.ls.apple.com,DIRECT
+DOMAIN,gspe35-ssl.ls.apple.com,DIRECT
+
+# 薯条插件@iRingo：WeatherKit
+DOMAIN,weather-analytics-events.apple.com,REJECT-DROP
+DOMAIN-SUFFIX,tthr.apple.com,REJECT-DROP
+
+DOMAIN,api.caiyunapp.com,DIRECT
+DOMAIN,weatherkit.apple.com,DIRECT
+DOMAIN,weather-map2.apple.com,DIRECT
+
+# 薯条插件@iRingo：Siri
+DOMAIN,api-*.smoot.apple.com,DIRECT
+DOMAIN,api2.smoot.apple.com,DIRECT
+DOMAIN,guzzoni.smoot.apple.com,DIRECT
+# ---------------------------------------
 # 广告拦截
 # > 屏蔽iOS更新
 DOMAIN,gdmf.apple.com,REJECT
