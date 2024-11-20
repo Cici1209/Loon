@@ -73,9 +73,9 @@ DOMAIN,weatherkit.apple.com,DIRECT
 DOMAIN,weather-map2.apple.com,DIRECT
 
 # 薯条插件@iRingo：Siri
-DOMAIN,api-*.smoot.apple.com,DIRECT
 DOMAIN,api2.smoot.apple.com,DIRECT
 DOMAIN,guzzoni.smoot.apple.com,DIRECT
+DOMAIN-SUFFIX,api-*.smoot.apple.com,DIRECT
 # ---------------------------------------
 # 广告拦截
 # > 屏蔽iOS更新
