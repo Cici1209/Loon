@@ -7915,17 +7915,6 @@ IP-CIDR,223.87.182.52/32,REJECT,no-resolve
 IP-CIDR,23.231.151.252/32,REJECT
 IP-CIDR,60.190.139.164/32,REJECT
 # ---------------------------------------
-# 特定软件规则（需要优先于DIRECT 匹配）
-# > 薯条插件-iRingo:Maps
-DOMAIN-SUFFIX,dispatcher.is.autonavi.com,Apple
-
-# > 薯条插件-iRingo:WeatherKit
-DOMAIN-SUFFIX,api.caiyunapp.com,Apple
-DOMAIN-SUFFIX,qweather.com,Apple
-
-# > 薯条插件-iRingo:Siri
-DOMAIN,api.smoot.apple.cn,Apple
-# ---------------------------------------
 # 全球直连
 # > Uni Dream
 DOMAIN-SUFFIX,guangzhuiyuan.com,DIRECT
