@@ -3,6 +3,10 @@
 #!author=Cici_WongYS
 
 [Rule]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaDNS/ChinaDNS.list,DIRECT
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaMax/ChinaMax.list,DIRECT
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/ChinaMax/ChinaMax_Domain.list,DIRECT
+
 # DNS
 # > NovaXNS_Domain_Collection
 DOMAIN-SUFFIX,beta.xns.one,NovaXNS
