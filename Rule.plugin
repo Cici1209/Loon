@@ -2,6 +2,8 @@
 #!desc=Loon 规则
 #!author=Cici_WongYS
 
+arg2 = select,"Direct","select2","select2",tag=参数2的标题,desc=这是一个选择类型的参数说明
+
 [Rule]
 # DNS
 # > NovaXNS_Domain_Collection
