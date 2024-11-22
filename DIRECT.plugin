@@ -919,6 +919,7 @@ IP-CIDR,1.10.64.0/18,DIRECT,no-resolve
 IP-CIDR,1.10.8.0/23,DIRECT,no-resolve
 IP-CIDR,1.116.0.0/14,DIRECT,no-resolve
 IP-CIDR,1.12.0.0/14,DIRECT,no-resolve
+IP-CIDR,1.12.12.12/32,DIRECT,no-resolve
 IP-CIDR,1.18.128.0/24,DIRECT,no-resolve
 IP-CIDR,1.180.0.0/14,DIRECT,no-resolve
 IP-CIDR,1.184.0.0/15,DIRECT,no-resolve
