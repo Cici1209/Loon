@@ -7,7 +7,7 @@
 arg1 = input,"DIRECT",tag=国内直连,desc=DIRECT
 
 [Rule]
-DOMAIN-SUFFIX,cn,argument=[{arg1}]
+DOMAIN-SUFFIX,cn
 DOMAIN-SUFFIX,ms
 DOMAIN-SUFFIX,alibaba
 DOMAIN-SUFFIX,alipay
