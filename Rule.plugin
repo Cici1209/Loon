@@ -2,10 +2,9 @@
 #!desc=Loon 规则
 #!author=Cici_WongYS
 
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaDNS/ChinaDNS.list
 [Rule]
 # DNS
-# > NovaXNS
+# > NovaXNS_Domain_Collection
 DOMAIN-SUFFIX,beta.xns.one,NovaXNS
 DOMAIN-SUFFIX,kahkee.xns.one,NovaXNS
 DOMAIN-SUFFIX,raito.xns.one,NovaXNS
@@ -17,6 +16,8 @@ DOMAIN-SUFFIX,nxns.link,NovaXNS
 DOMAIN-SUFFIX,xns.one,NovaXNS
 DOMAIN-SUFFIX,hcaptcha.com,NovaXNS
 DOMAIN-SUFFIX,skypack.dev,NovaXNS
+
+# > NovaXNS@IPV4
 IP-CIDR,8.217.246.48/32,NovaXNS,no-resolve
 IP-CIDR,45.249.245.247/32,NovaXNS,no-resolve
 IP-CIDR,172.93.220.162/32,NovaXNS,no-resolve
@@ -25,8 +26,10 @@ IP-CIDR,103.150.8.98/32,NovaXNS,no-resolve
 IP-CIDR,45.141.139.16/32,NovaXNS,no-resolve
 IP-CIDR,148.178.21.17/32,NovaXNS,no-resolve
 
-# > CloudFlare
+# > CloudFlare_Domain_Collection
 DOMAIN-SUFFIX,cloudflare.com,CloudFlare
+
+# > CloudFlare@IPV4
 IP-CIDR,103.21.244.0/22,CloudFlare,no-resolve
 IP-CIDR,103.22.200.0/22,CloudFlare,no-resolve
 IP-CIDR,103.31.4.0/22,CloudFlare,no-resolve
@@ -54,18 +57,18 @@ IP-CIDR,190.93.240.0/20,CloudFlare,no-resolve
 IP-CIDR,197.234.240.0/22,CloudFlare,no-resolve
 IP-CIDR,198.41.128.0/17,CloudFlare,no-resolve
 # ---------------------------------------
-# 薯条插件@iRingo：Location
+# 薯条插件
+# > iRingo：Location
 DOMAIN,gspe1-ssl.ls.apple.com,DIRECT
 
-# 薯条插件@iRingo：Maps
+# > iRingo：Maps
 DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
 DOMAIN,dispatcher.is.autonavi.com,DIRECT
 DOMAIN,direction2.is.autonavi.com,DIRECT
-
 DOMAIN,configuration.ls.apple.com,DIRECT
 DOMAIN,gspe35-ssl.ls.apple.com,DIRECT
 
-# 薯条插件@iRingo：WeatherKit
+# > iRingo：WeatherKit
 DOMAIN,weather-analytics-events.apple.com,REJECT-DROP
 DOMAIN-SUFFIX,tthr.apple.com,REJECT-DROP
 
@@ -73,12 +76,12 @@ DOMAIN,api.caiyunapp.com,DIRECT
 DOMAIN,weatherkit.apple.com,DIRECT
 DOMAIN,weather-map2.apple.com,DIRECT
 
-# 薯条插件@iRingo：Siri
+# > iRingo：Siri
 DOMAIN,api2.smoot.apple.com,DIRECT
 DOMAIN,guzzoni.smoot.apple.com,DIRECT
 DOMAIN-SUFFIX,api-*.smoot.apple.com,DIRECT
 # ---------------------------------------
-# 广告拦截
+# 全球拦截
 # > 屏蔽iOS更新
 DOMAIN,gdmf.apple.com,REJECT
 DOMAIN,xp.apple.com,REJECT
@@ -88,6 +91,7 @@ DOMAIN,crash.xiaohongshu.com,REJECT
 DOMAIN,referee.xiaohongshu.com,REJECT
 DOMAIN,fp-it.fengkongcloud.com,REJECT
 
+# > REJECT_Domain_Collection
 DOMAIN,adsbdfs.heytapimage.com,REJECT
 DOMAIN,adsfs.heytapimage.com,REJECT
 DOMAIN,adsmind.apdcdn.tc.qq.com,REJECT
@@ -7891,6 +7895,8 @@ DOMAIN-SUFFIX,zzohucf.icu,REJECT
 DOMAIN-SUFFIX,zzsx8.com,REJECT
 DOMAIN-SUFFIX,zztxfj.xyz,REJECT
 DOMAIN-SUFFIX,zzy1.quyaoya.com,REJECT
+
+# > REJECT@IPV4
 IP-CIDR,101.227.200.0/24,REJECT,no-resolve
 IP-CIDR,101.227.200.11/32,REJECT,no-resolve
 IP-CIDR,101.227.200.28/32,REJECT,no-resolve
@@ -7920,6 +7926,7 @@ IP-CIDR,60.190.139.164/32,REJECT
 # > Uni Dream
 DOMAIN-SUFFIX,guangzhuiyuan.com,DIRECT
 
+# > DIRECT_Domain_Collection
 DOMAIN,analytics.strava.com,DIRECT
 DOMAIN,app.adjust.com,DIRECT
 DOMAIN,bdtj.tagtic.cn,DIRECT
@@ -8701,14 +8708,8 @@ DOMAIN-SUFFIX,zmzapi.com,DIRECT
 DOMAIN-SUFFIX,zmzapi.net,DIRECT
 DOMAIN-SUFFIX,zmzfile.com,DIRECT
 DOMAIN-SUFFIX,zte.home,DIRECT
-IP-CIDR6,::1/128,DIRECT,no-resolve
-IP-CIDR6,2a0b:b580::/48,DIRECT,no-resolve
-IP-CIDR6,2a0b:b581::/48,DIRECT,no-resolve
-IP-CIDR6,2a0b:b582::/48,DIRECT,no-resolve
-IP-CIDR6,2a0b:b583::/48,DIRECT,no-resolve
-IP-CIDR6,fc00::/7,DIRECT,no-resolve
-IP-CIDR6,fd00::/8,DIRECT,no-resolve
-IP-CIDR6,fe80::/10,DIRECT,no-resolve
+
+# > DIRECT@IPV4
 IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
 IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
 IP-CIDR,101.198.128.0/18,DIRECT,no-resolve
@@ -8943,11 +8944,71 @@ IP-CIDR,81.52.161.0/24,DIRECT,no-resolve
 IP-CIDR,85.97.220.0/22,DIRECT,no-resolve
 IP-CIDR,94.191.0.0/17,DIRECT,no-resolve
 
+# > DIRECT@IPV6
+IP-CIDR6,::1/128,DIRECT,no-resolve
+IP-CIDR6,2a0b:b580::/48,DIRECT,no-resolve
+IP-CIDR6,2a0b:b581::/48,DIRECT,no-resolve
+IP-CIDR6,2a0b:b582::/48,DIRECT,no-resolve
+IP-CIDR6,2a0b:b583::/48,DIRECT,no-resolve
+IP-CIDR6,fc00::/7,DIRECT,no-resolve
+IP-CIDR6,fd00::/8,DIRECT,no-resolve
+IP-CIDR6,fe80::/10,DIRECT,no-resolve
+
 # 剩余未匹配的国内网站
 DOMAIN-SUFFIX,.cn,DIRECT
 DOMAIN-SUFFIX,cn,DIRECT
 # ---------------------------------------
 # AI
+# > ChatGPT
+AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-eastus-), (DOMAIN-KEYWORD, .webpubsub.azure.com)),AI
+DOMAIN, chat.openai.com.cdn.cloudflare.net,AI
+DOMAIN, o33249.ingest.sentry.io,AI
+DOMAIN, openaiapi-site.azureedge.net,AI
+DOMAIN, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,AI
+DOMAIN, openaicom.imgix.net,AI
+DOMAIN, openaicomproductionae4b.blob.core.windows.net,AI
+DOMAIN, production-openaicom-storage.azureedge.net,AI
+DOMAIN-SUFFIX, chatgpt.com,AI
+DOMAIN-SUFFIX, oaistatic.com,AI
+DOMAIN-SUFFIX, oaiusercontent.com,AI
+DOMAIN-SUFFIX, openai.com,AI
+
+# > Copilot
+DOMAIN, api.githubcopilot.com,AI
+DOMAIN, copilot-proxy.githubusercontent.com,AI
+DOMAIN, copilot.microsoft.com,AI
+DOMAIN, sydney.bing.com,AI
+DOMAIN, www.bing.com,AI
+
+# > Gemini
+DOMAIN, bard.google.com,AI
+DOMAIN, gemini.google.com,AI
+DOMAIN, generativelanguage.googleapis.com,AI
+DOMAIN, ai.google.dev,AI
+DOMAIN, aida.googleapis.com,AI
+DOMAIN, aistudio.google.com,AI
+DOMAIN, alkalimakersuite-pa.clients6.google.com,AI
+DOMAIN, makersuite.google.com,AI
+
+# > Claude_Domain_Collection
+DOMAIN-SUFFIX, anthropic.com,AI
+DOMAIN-SUFFIX, claude.ai,AI
+
+# > Claude@IPV4
+IP-CIDR, 160.79.104.0/23,AI,no-resolve
+
+# > Claude@IPV6
+IP-CIDR6, 2607:6bc0::/48,AI,no-resolve
+
+# > JetBrains AI
+DOMAIN-SUFFIX, grazie.ai,AI
+DOMAIN-SUFFIX, grazie.aws.intellij.net,AI
+
+# > Meta
+DOMAIN, imagine.meta.com,AI
+DOMAIN-SUFFIX, meta.ai,AI
+
+# > AI_Domain_Collection
 DOMAIN,browser-intake-datadoghq.com,AI
 DOMAIN,chat.openai.com.cdn.cloudflare.net,AI
 DOMAIN,openaiapi-site.azureedge.net,AI
@@ -8979,13 +9040,15 @@ DOMAIN-SUFFIX,segment.io,AI
 DOMAIN-SUFFIX,sentry.io,AI
 DOMAIN-SUFFIX,stripe.com,AI
 DOMAIN-SUFFIX,turn.livekit.cloud,AI
+
+# > AI@IPV4
 IP-CIDR,24.199.123.28/32,AI,no-resolve
 IP-CIDR,64.23.132.171/32,AI,no-resolve
 # ---------------------------------------
 # Apple
+# > Apple_Domain_Collection
 DOMAIN,apple-relay.fastly-edge.com,Apple
 DOMAIN-SUFFIX,gateway.icloud.com,Apple
-
 DOMAIN,apple.comscoreresearch.com,Apple
 DOMAIN-SUFFIX,aaplimg.com,Apple
 DOMAIN-SUFFIX,akadns.net,Apple
@@ -9004,6 +9067,8 @@ DOMAIN-SUFFIX,icloud-content.com,Apple
 DOMAIN-SUFFIX,itunes.com,Apple
 DOMAIN-SUFFIX,me.com,Apple
 DOMAIN-SUFFIX,mzstatic.com,Apple
+
+# > Apple@IPV4
 IP-CIDR,139.178.128.0/18,Apple,no-resolve
 IP-CIDR,144.178.0.0/19,Apple,no-resolve
 IP-CIDR,144.178.36.0/22,Apple,no-resolve
@@ -9023,18 +9088,23 @@ DOMAIN-SUFFIX,spotify.com,Spotify
 # > Swiftgram
 DOMAIN-KEYWORD,swiftgram,Telegram
 
+# > Telegram_Domain_Collection
 DOMAIN-SUFFIX,t.me,Telegram
 DOMAIN-SUFFIX,tdesktop.com,Telegram
 DOMAIN-SUFFIX,telegra.ph,Telegram
 DOMAIN-SUFFIX,telegram.me,Telegram
 DOMAIN-SUFFIX,telegram.org,Telegram
 DOMAIN-SUFFIX,telesco.pe,Telegram
-IP-CIDR6,2001:67c:4e8::/48,Telegram,no-resolve
-IP-CIDR6,2001:b28:f23d::/48,Telegram,no-resolve
-IP-CIDR6,2001:b28:f23f::/48,Telegram,no-resolve
+
+# > Telegram@IPV4
 IP-CIDR,109.239.140.0/24,Telegram,no-resolve
 IP-CIDR,149.154.160.0/20,Telegram,no-resolve
 IP-CIDR,91.108.0.0/16,Telegram,no-resolve
+
+# > Telegram@IPV6
+IP-CIDR6,2001:67c:4e8::/48,Telegram,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,Telegram,no-resolve
+IP-CIDR6,2001:b28:f23f::/48,Telegram,no-resolve
 # ---------------------------------------
 # GitHub
 DOMAIN-KEYWORD,github,GitHub
@@ -9069,6 +9139,7 @@ DOMAIN-SUFFIX,repo.new,GitHub
 DOMAIN-SUFFIX,thegithubshop.com,GitHub
 # ---------------------------------------
 # Bilibili
+# > Bilibili_Domain_Collection
 DOMAIN,p.bstarstatic.com,Bilibili
 DOMAIN,p-bstarstatic.akamaized.net,Bilibili
 DOMAIN,upos-bstar1-mirrorakam.akamaized.net,Bilibili
@@ -9090,6 +9161,8 @@ DOMAIN-SUFFIX,bilivideo.com,Bilibili
 DOMAIN-SUFFIX,hdslb.com,Bilibili
 DOMAIN-SUFFIX,im9.com,Bilibili
 DOMAIN-SUFFIX,smtcdns.net,Bilibili
+
+# > Bilibili@IPV4
 IP-CIDR,119.29.29.29/32,Bilibili,no-resolve
 IP-CIDR,128.1.62.200/32,Bilibili,no-resolve
 IP-CIDR,128.1.62.201/32,Bilibili,no-resolve
@@ -9133,6 +9206,7 @@ DOMAIN-SUFFIX,tiktokv.com,TikTok
 DOMAIN-SUFFIX,tokapi.com,TikTok
 # ---------------------------------------
 # GlobalMedia
+# > GlobalMedia_Domain_Collection
 DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,GlobalMedia
 DOMAIN,aod-dash-uk-live.akamaized.net,GlobalMedia
 DOMAIN,aod-hls-uk-live.akamaized.net,GlobalMedia
@@ -9398,6 +9472,8 @@ DOMAIN-SUFFIX,youtubekids.com,GlobalMedia
 DOMAIN-SUFFIX,youtube-nocookie.com,GlobalMedia
 DOMAIN-SUFFIX,yt.be,GlobalMedia
 DOMAIN-SUFFIX,ytimg.com,GlobalMedia
+
+# > GlobalMedia@IPV4
 IP-CIDR,103.87.204.0/22,GlobalMedia,no-resolve
 IP-CIDR,108.175.32.0/20,GlobalMedia,no-resolve
 IP-CIDR,185.2.220.0/22,GlobalMedia,no-resolve
@@ -9420,6 +9496,7 @@ IP-CIDR,8.41.4.0/24,GlobalMedia,no-resolve
 # > 网站 whois
 DOMAIN,www.whois.com,Global
 
+# > Global_Domain_Collection
 DOMAIN,steambroadcast.akamaized.net,Global
 DOMAIN,steamcdn-a.akamaihd.net,Global
 DOMAIN,steamcommunity-a.akamaihd.net,Global
@@ -15417,9 +15494,8 @@ DOMAIN-SUFFIX,zyzc9.com,Global
 DOMAIN-SUFFIX,zzcartoon.com,Global
 DOMAIN-SUFFIX,zzcloud.me,Global
 DOMAIN-SUFFIX,zzux.com,Global
-IP-CIDR6,2001:67c:4e8::/48,Global,no-resolve
-IP-CIDR6,2001:b28:f23d::/48,Global,no-resolve
-IP-CIDR6,2001:b28:f23f::/48,Global,no-resolve
+
+# > Global@IPV4
 IP-CIDR,1.201.0.0/24,Global,no-resolve
 IP-CIDR,103.2.28.0/24,Global,no-resolve
 IP-CIDR,103.2.30.0/23,Global,no-resolve
@@ -15506,5 +15582,9 @@ IP-CIDR,74.119.76.0/22,Global,no-resolve
 IP-CIDR,74.125.0.0/16,Global,no-resolve
 IP-CIDR,75.126.150.0/16,Global,no-resolve
 IP-CIDR,91.108.0.0/16,Global,no-resolve
-# ---------------------------------------
 
+# > Global@IPV6
+IP-CIDR6,2001:67c:4e8::/48,Global,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,Global,no-resolve
+IP-CIDR6,2001:b28:f23f::/48,Global,no-resolve
+# ---------------------------------------
