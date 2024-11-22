@@ -3,6 +3,8 @@
 #!author=Cici_WongYS
 
 [Rule]
+# DNS
+# > DNS_Domain_Collection
 DOMAIN-SUFFIX,dns.alidns.com,DIRECT
 DOMAIN-SUFFIX,doh.360.cn,DIRECT
 DOMAIN-SUFFIX,doh.pub,DIRECT
