@@ -1,3 +1,7 @@
+#!name=Loon Rule
+#!desc=Loon 规则
+#!author=Cici_WongYS
+
 [Remote Rule]
 # LAN
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Lan/Lan.list, policy=DIRECT, tag=LAN@bm7-no-resolve, enabled=true
