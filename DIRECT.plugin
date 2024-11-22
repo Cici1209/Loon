@@ -12,4 +12,7 @@ DOMAIN-SUFFIX,doh.pub,DIRECT
 # > DNS@IPV4
 IP-CIDR,1.12.12.12/32,DIRECT,no-resolve
 
+# > DIRECT_Domain_Collection
+
+
 
