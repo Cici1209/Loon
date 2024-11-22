@@ -15505,7 +15505,12 @@ IP-CIDR,74.119.76.0/22,Global,no-resolve
 IP-CIDR,74.125.0.0/16,Global,no-resolve
 IP-CIDR,75.126.150.0/16,Global,no-resolve
 IP-CIDR,91.108.0.0/16,Global,no-resolve
-
 # ---------------------------------------
 [Remote Rule]
+# LAN
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Lan/Lan.list, policy=DIRECT, tag=LAN@bm7-no-resolve, enabled=true
+# ChinaMax
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaMax/ChinaMax.list, policy=DIRECT, tag=ChinaMax, enabled=true
+# 可莉CN规则（暂时不启用）
+# https://kelee.one/Tool/Loon/Rule/CN_REGION, policy=DIRECT, tag=CN REGION, enabled=false
+
