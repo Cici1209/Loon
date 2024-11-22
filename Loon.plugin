@@ -6,6 +6,12 @@
 # IP-CIDR: 1
 # TOTAL: 4
 
+
+[Argument]
+PROXY = select
+
+
+
 [Rule]
 DOMAIN-SUFFIX,dns.alidns.com
 DOMAIN-SUFFIX,doh.360.cn
