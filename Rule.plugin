@@ -2,6 +2,7 @@
 #!desc=Loon 规则
 #!author=Cici_WongYS
 
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaDNS/ChinaDNS.list
 [Rule]
 # DNS
 # > NovaXNS
