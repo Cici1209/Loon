@@ -2,11 +2,6 @@
 #!desc=Loon 规则
 #!author=Cici_WongYS
 
-[Argument]
-
-arg1 = select,"DIRECT","REJECT","Global",tag=cici,desc=test
-
-
 [Rule]
 # DNS
 # > NovaXNS_Domain_Collection
