@@ -7952,7 +7952,6 @@ DOMAIN-KEYWORD,baidupcs,DIRECT
 DOMAIN-KEYWORD,bilibili,DIRECT
 DOMAIN-KEYWORD,ccgslb,DIRECT
 DOMAIN-KEYWORD,chinacache,DIRECT
-
 DOMAIN-KEYWORD,duobao,DIRECT
 DOMAIN-KEYWORD,jdpay,DIRECT
 DOMAIN-KEYWORD,moke,DIRECT
@@ -8122,7 +8121,6 @@ DOMAIN-SUFFIX,clientservices.googleapis.com,DIRECT
 DOMAIN-SUFFIX,clouddn.com,DIRECT
 DOMAIN-SUFFIX,cloudxns.net,DIRECT
 DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
-
 DOMAIN-SUFFIX,cn163.net,DIRECT
 DOMAIN-SUFFIX,cnbeta.com,DIRECT
 DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
@@ -8702,6 +8700,14 @@ DOMAIN-SUFFIX,zmzapi.com,DIRECT
 DOMAIN-SUFFIX,zmzapi.net,DIRECT
 DOMAIN-SUFFIX,zmzfile.com,DIRECT
 DOMAIN-SUFFIX,zte.home,DIRECT
+IP-CIDR6,::1/128,DIRECT,no-resolve
+IP-CIDR6,2a0b:b580::/48,DIRECT,no-resolve
+IP-CIDR6,2a0b:b581::/48,DIRECT,no-resolve
+IP-CIDR6,2a0b:b582::/48,DIRECT,no-resolve
+IP-CIDR6,2a0b:b583::/48,DIRECT,no-resolve
+IP-CIDR6,fc00::/7,DIRECT,no-resolve
+IP-CIDR6,fd00::/8,DIRECT,no-resolve
+IP-CIDR6,fe80::/10,DIRECT,no-resolve
 IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
 IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
 IP-CIDR,101.198.128.0/18,DIRECT,no-resolve
@@ -8935,14 +8941,6 @@ IP-CIDR,8.208.0.0/12,DIRECT,no-resolve
 IP-CIDR,81.52.161.0/24,DIRECT,no-resolve
 IP-CIDR,85.97.220.0/22,DIRECT,no-resolve
 IP-CIDR,94.191.0.0/17,DIRECT,no-resolve
-IP-CIDR6,::1/128,DIRECT,no-resolve
-IP-CIDR6,2a0b:b580::/48,DIRECT,no-resolve
-IP-CIDR6,2a0b:b581::/48,DIRECT,no-resolve
-IP-CIDR6,2a0b:b582::/48,DIRECT,no-resolve
-IP-CIDR6,2a0b:b583::/48,DIRECT,no-resolve
-IP-CIDR6,fc00::/7,DIRECT,no-resolve
-IP-CIDR6,fd00::/8,DIRECT,no-resolve
-IP-CIDR6,fe80::/10,DIRECT,no-resolve
 
 # 剩余未匹配的国内网站
 DOMAIN-SUFFIX,.cn,DIRECT
@@ -9030,12 +9028,12 @@ DOMAIN-SUFFIX,telegra.ph,Telegram
 DOMAIN-SUFFIX,telegram.me,Telegram
 DOMAIN-SUFFIX,telegram.org,Telegram
 DOMAIN-SUFFIX,telesco.pe,Telegram
-IP-CIDR,109.239.140.0/24,Telegram,no-resolve
-IP-CIDR,149.154.160.0/20,Telegram,no-resolve
-IP-CIDR,91.108.0.0/16,Telegram,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,Telegram,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,Telegram,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,Telegram,no-resolve
+IP-CIDR,109.239.140.0/24,Telegram,no-resolve
+IP-CIDR,149.154.160.0/20,Telegram,no-resolve
+IP-CIDR,91.108.0.0/16,Telegram,no-resolve
 # ---------------------------------------
 # GitHub
 DOMAIN-KEYWORD,github,GitHub
@@ -15418,6 +15416,9 @@ DOMAIN-SUFFIX,zyzc9.com,Global
 DOMAIN-SUFFIX,zzcartoon.com,Global
 DOMAIN-SUFFIX,zzcloud.me,Global
 DOMAIN-SUFFIX,zzux.com,Global
+IP-CIDR6,2001:67c:4e8::/48,Global,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,Global,no-resolve
+IP-CIDR6,2001:b28:f23f::/48,Global,no-resolve
 IP-CIDR,1.201.0.0/24,Global,no-resolve
 IP-CIDR,103.2.28.0/24,Global,no-resolve
 IP-CIDR,103.2.30.0/23,Global,no-resolve
@@ -15504,7 +15505,7 @@ IP-CIDR,74.119.76.0/22,Global,no-resolve
 IP-CIDR,74.125.0.0/16,Global,no-resolve
 IP-CIDR,75.126.150.0/16,Global,no-resolve
 IP-CIDR,91.108.0.0/16,Global,no-resolve
-IP-CIDR6,2001:67c:4e8::/48,Global,no-resolve
-IP-CIDR6,2001:b28:f23d::/48,Global,no-resolve
-IP-CIDR6,2001:b28:f23f::/48,Global,no-resolve
+
 # ---------------------------------------
+[Remote Rule]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaMax/ChinaMax.list, policy=DIRECT, tag=ChinaMax, enabled=true
