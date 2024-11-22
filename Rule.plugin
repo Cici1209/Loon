@@ -3,7 +3,6 @@
 #!author=Cici_WongYS
 
 [Rule]
-#!tag = DNS
 # DNS
 # > NovaXNS_Domain_Collection
 DOMAIN-SUFFIX,beta.xns.one,NovaXNS
