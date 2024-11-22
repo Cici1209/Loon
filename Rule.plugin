@@ -56,6 +56,14 @@ IP-CIDR,188.114.96.0/20,CloudFlare,no-resolve
 IP-CIDR,190.93.240.0/20,CloudFlare,no-resolve
 IP-CIDR,197.234.240.0/22,CloudFlare,no-resolve
 IP-CIDR,198.41.128.0/17,CloudFlare,no-resolve
+
+# > DNS_Domain_Collection
+DOMAIN-SUFFIX,dns.alidns.com,DIRECT
+DOMAIN-SUFFIX,doh.360.cn,DIRECT
+DOMAIN-SUFFIX,doh.pub,DIRECT
+
+# > DNS@IPV4
+IP-CIDR,1.12.12.12/32,DIRECT,no-resolve
 # ---------------------------------------
 # 薯条插件
 # > iRingo：Location
