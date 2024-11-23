@@ -1,0 +1,62 @@
+#!name=DIRECT Rule
+#!desc=直连规则
+#!author=Cici_WongYS
+
+[Rule]
+DOMAIN-SUFFIX,dns.alidns.com,DIRECT
+DOMAIN-SUFFIX,doh.pub,DIRECT
+DOMAIN-SUFFIX,doh.360.cn,DIRECT
+IP-CIDR,1.12.12.12/32,DIRECT,no-resolve
+
+# > NovaXNS_Domain_Collection
+DOMAIN-SUFFIX,beta.xns.one,NovaXNS
+DOMAIN-SUFFIX,kahkee.xns.one,NovaXNS
+DOMAIN-SUFFIX,raito.xns.one,NovaXNS
+DOMAIN-SUFFIX,pro.xns.one,NovaXNS
+DOMAIN-SUFFIX,novaxns.one,NovaXNS
+DOMAIN-SUFFIX,xns.rodeo,NovaXNS
+DOMAIN-SUFFIX,xns.my.id,NovaXNS
+DOMAIN-SUFFIX,nxns.link,NovaXNS
+DOMAIN-SUFFIX,xns.one,NovaXNS
+DOMAIN-SUFFIX,hcaptcha.com,NovaXNS
+DOMAIN-SUFFIX,skypack.dev,NovaXNS
+
+# > NovaXNS@IPV4
+IP-CIDR,8.217.246.48/32,NovaXNS,no-resolve
+IP-CIDR,45.249.245.247/32,NovaXNS,no-resolve
+IP-CIDR,172.93.220.162/32,NovaXNS,no-resolve
+IP-CIDR,206.237.31.237/32,NovaXNS,no-resolve
+IP-CIDR,103.150.8.98/32,NovaXNS,no-resolve
+IP-CIDR,45.141.139.16/32,NovaXNS,no-resolve
+IP-CIDR,148.178.21.17/32,NovaXNS,no-resolve
+
+# > CloudFlare_Domain_Collection
+DOMAIN-SUFFIX,cloudflare.com,CloudFlare
+
+# > CloudFlare@IPV4
+IP-CIDR,103.21.244.0/22,CloudFlare,no-resolve
+IP-CIDR,103.22.200.0/22,CloudFlare,no-resolve
+IP-CIDR,103.31.4.0/22,CloudFlare,no-resolve
+IP-CIDR,104.16.0.0/13,CloudFlare,no-resolve
+IP-CIDR,104.24.0.0/14,CloudFlare,no-resolve
+IP-CIDR,108.162.192.0/18,CloudFlare,no-resolve
+IP-CIDR,131.0.72.0/22,CloudFlare,no-resolve
+IP-CIDR,141.101.64.0/18,CloudFlare,no-resolve
+IP-CIDR,162.158.0.0/15,CloudFlare,no-resolve
+IP-CIDR,172.64.0.0/17,CloudFlare,no-resolve
+IP-CIDR,172.64.128.0/18,CloudFlare,no-resolve
+IP-CIDR,172.64.192.0/19,CloudFlare,no-resolve
+IP-CIDR,172.64.224.0/22,CloudFlare,no-resolve
+IP-CIDR,172.64.229.0/24,CloudFlare,no-resolve
+IP-CIDR,172.64.230.0/23,CloudFlare,no-resolve
+IP-CIDR,172.64.232.0/21,CloudFlare,no-resolve
+IP-CIDR,172.64.240.0/21,CloudFlare,no-resolve
+IP-CIDR,172.64.248.0/21,CloudFlare,no-resolve
+IP-CIDR,172.65.0.0/16,CloudFlare,no-resolve
+IP-CIDR,172.66.0.0/16,CloudFlare,no-resolve
+IP-CIDR,172.67.0.0/16,CloudFlare,no-resolve
+IP-CIDR,173.245.48.0/20,CloudFlare,no-resolve
+IP-CIDR,188.114.96.0/20,CloudFlare,no-resolve
+IP-CIDR,190.93.240.0/20,CloudFlare,no-resolve
+IP-CIDR,197.234.240.0/22,CloudFlare,no-resolve
+IP-CIDR,198.41.128.0/17,CloudFlare,no-resolve
