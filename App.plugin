@@ -234,10 +234,6 @@ DOMAIN,upos-bstar-mirrorakam.akamaized.net,Bilibili
 DOMAIN,upos-hz-mirrorakam.akamaized.net,Bilibili
 DOMAIN-SUFFIX,bilibili.tv,Bilibili
 
-
-
-
-
 # > Bilibili@IPV4
 IP-CIDR,119.29.29.29/32,Bilibili,no-resolve
 IP-CIDR,128.1.62.200/32,Bilibili,no-resolve
