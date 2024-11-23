@@ -94,10 +94,6 @@ DOMAIN,fp-it.fengkongcloud.com,REJECT
 # 全球直连
 # > Uni Dream
 DOMAIN-SUFFIX,guangzhuiyuan.com,DIRECT
-
-# 剩余未匹配的国内网站
-DOMAIN-SUFFIX,.cn,DIRECT
-DOMAIN-SUFFIX,cn,DIRECT
 # ---------------------------------------
 # AI
 # > ChatGPT
