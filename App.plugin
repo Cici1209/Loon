@@ -292,6 +292,9 @@ DOMAIN-SUFFIX,tokapi.com,TikTok
 # GlobalMedia
 # ---------------------------------------
 # Global
+# > 机场 ASH
+DOMAIN,air.ash.yt,Global
+
 # > 网站 whois
 DOMAIN,www.whois.com,Global
 # ---------------------------------------
