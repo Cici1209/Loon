@@ -36,7 +36,6 @@ DOMAIN-KEYWORD,pinterest,Global
 DOMAIN-KEYWORD,porn,Global
 DOMAIN-KEYWORD,sci-hub,Global
 DOMAIN-KEYWORD,skydrive,Global
-DOMAIN-KEYWORD,spotify,Global
 DOMAIN-KEYWORD,telegram,Global
 DOMAIN-KEYWORD,tiktok,Global
 DOMAIN-KEYWORD,ttvnw,Global
@@ -46,7 +45,6 @@ DOMAIN-KEYWORD,uk-live,Global
 DOMAIN-KEYWORD,voddazn,Global
 DOMAIN-KEYWORD,whatsapp,Global
 DOMAIN-KEYWORD,wikileaks,Global
-DOMAIN-KEYWORD,youtube,Global
 DOMAIN-SUFFIX,000webhost.com,Global
 DOMAIN-SUFFIX,030buy.com,Global
 DOMAIN-SUFFIX,0rz.tw,Global
@@ -378,7 +376,6 @@ DOMAIN-SUFFIX,appledaily.com,Global
 DOMAIN-SUFFIX,appledaily.com.hk,Global
 DOMAIN-SUFFIX,appledaily.com.tw,Global
 DOMAIN-SUFFIX,app-measurement.net,Global
-DOMAIN-SUFFIX,appsflyersdk.com,Global
 DOMAIN-SUFFIX,appshopper.com,Global
 DOMAIN-SUFFIX,appsocks.net,Global
 DOMAIN-SUFFIX,appspot.com,Global
@@ -741,7 +738,6 @@ DOMAIN-SUFFIX,bybit.com,Global
 DOMAIN-SUFFIX,bynet.co.il,Global
 DOMAIN-SUFFIX,bypasscensorship.org,Global
 DOMAIN-SUFFIX,byrut.org,Global
-DOMAIN-SUFFIX,byteoversea.com,Global
 DOMAIN-SUFFIX,c100tibet.org,Global
 DOMAIN-SUFFIX,c2cx.com,Global
 DOMAIN-SUFFIX,ca,Global
@@ -1954,7 +1950,6 @@ DOMAIN-SUFFIX,giganews.com,Global
 DOMAIN-SUFFIX,giga-web.jp,Global
 DOMAIN-SUFFIX,gigporno.ru,Global
 DOMAIN-SUFFIX,girlbanker.com,Global
-DOMAIN-SUFFIX,git.io,Global
 DOMAIN-SUFFIX,gitbooks.io,Global
 DOMAIN-SUFFIX,githack.com,Global
 DOMAIN-SUFFIX,github.blog,Global
@@ -2261,7 +2256,6 @@ DOMAIN-SUFFIX,googleplus.com,Global
 DOMAIN-SUFFIX,googlesile.com,Global
 DOMAIN-SUFFIX,googlesource.com,Global
 DOMAIN-SUFFIX,googleusercontent.com,Global
-DOMAIN-SUFFIX,googlevideo.com,Global
 DOMAIN-SUFFIX,googleweblight.com,Global
 DOMAIN-SUFFIX,googlezip.net,Global
 DOMAIN-SUFFIX,gopetition.com,Global
@@ -2332,7 +2326,6 @@ DOMAIN-SUFFIX,gvlib.com,Global
 DOMAIN-SUFFIX,gvm.com.tw,Global
 DOMAIN-SUFFIX,gvt0.com,Global
 DOMAIN-SUFFIX,gvt1.com,Global
-DOMAIN-SUFFIX,gvt2.com,Global
 DOMAIN-SUFFIX,gvt3.com,Global
 DOMAIN-SUFFIX,gwins.org,Global
 DOMAIN-SUFFIX,gwtproject.org,Global
@@ -2624,7 +2617,6 @@ DOMAIN-SUFFIX,iblogserv-f.net,Global
 DOMAIN-SUFFIX,ibros.org,Global
 DOMAIN-SUFFIX,ibtimes.com,Global
 DOMAIN-SUFFIX,ibvpn.com,Global
-DOMAIN-SUFFIX,ibytedtos.com,Global
 DOMAIN-SUFFIX,i-cable.com,Global
 DOMAIN-SUFFIX,icams.com,Global
 DOMAIN-SUFFIX,icerocket.com,Global
@@ -2740,7 +2732,6 @@ DOMAIN-SUFFIX,ipoock.com,Global
 DOMAIN-SUFFIX,iportal.me,Global
 DOMAIN-SUFFIX,ippotv.com,Global
 DOMAIN-SUFFIX,ipredator.se,Global
-DOMAIN-SUFFIX,ipstatp.com,Global
 DOMAIN-SUFFIX,iptv.com.tw,Global
 DOMAIN-SUFFIX,iptvbin.com,Global
 DOMAIN-SUFFIX,ipvanish.com,Global
@@ -3422,9 +3413,7 @@ DOMAIN-SUFFIX,multiproxy.org,Global
 DOMAIN-SUFFIX,multiupload.com,Global
 DOMAIN-SUFFIX,mummysgold.com,Global
 DOMAIN-SUFFIX,murmur.tw,Global
-DOMAIN-SUFFIX,muscdn.com,Global
 DOMAIN-SUFFIX,musicade.net,Global
-DOMAIN-SUFFIX,musical.ly,Global
 DOMAIN-SUFFIX,muslimvideo.com,Global
 DOMAIN-SUFFIX,muzi.com,Global
 DOMAIN-SUFFIX,muzi.net,Global
@@ -4184,8 +4173,6 @@ DOMAIN-SUFFIX,raremovie.cc,Global
 DOMAIN-SUFFIX,raremovie.net,Global
 DOMAIN-SUFFIX,rateyourmusic.com,Global
 DOMAIN-SUFFIX,rationalwiki.org,Global
-DOMAIN-SUFFIX,rawgit.com,Global
-DOMAIN-SUFFIX,rawgithub.com,Global
 DOMAIN-SUFFIX,raxcdn.com,Global
 DOMAIN-SUFFIX,razyboard.com,Global
 DOMAIN-SUFFIX,rcinet.ca,Global
@@ -4540,7 +4527,6 @@ DOMAIN-SUFFIX,smith.edu,Global
 DOMAIN-SUFFIX,sm-miracle.com,Global
 DOMAIN-SUFFIX,smyxy.org,Global
 DOMAIN-SUFFIX,snapchat.com,Global
-DOMAIN-SUFFIX,snapkit.com,Global
 DOMAIN-SUFFIX,snaptu.com,Global
 DOMAIN-SUFFIX,sndcdn.com,Global
 DOMAIN-SUFFIX,sneakme.net,Global
@@ -4753,7 +4739,6 @@ DOMAIN-SUFFIX,syx86.com,Global
 DOMAIN-SUFFIX,szbbs.net,Global
 DOMAIN-SUFFIX,szetowah.org.hk,Global
 DOMAIN-SUFFIX,t.co,Global
-DOMAIN-SUFFIX,t.me,Global
 DOMAIN-SUFFIX,t35.com,Global
 DOMAIN-SUFFIX,t66y.com,Global
 DOMAIN-SUFFIX,t91y.com,Global
@@ -4832,7 +4817,6 @@ DOMAIN-SUFFIX,tcpspeed.co,Global
 DOMAIN-SUFFIX,tcpspeed.com,Global
 DOMAIN-SUFFIX,tcsofbc.org,Global
 DOMAIN-SUFFIX,tcsovi.org,Global
-DOMAIN-SUFFIX,tdesktop.com,Global
 DOMAIN-SUFFIX,tdm.com.mo,Global
 DOMAIN-SUFFIX,teachparentstech.org,Global
 DOMAIN-SUFFIX,teamamericany.com,Global
@@ -4847,13 +4831,11 @@ DOMAIN-SUFFIX,teeniefuck.net,Global
 DOMAIN-SUFFIX,teensinasia.com,Global
 DOMAIN-SUFFIX,tehrantimes.com,Global
 DOMAIN-SUFFIX,telecomspace.com,Global
-DOMAIN-SUFFIX,telegra.ph,Global
 DOMAIN-SUFFIX,telegram.dog,Global
 DOMAIN-SUFFIX,telegram.me,Global
 DOMAIN-SUFFIX,telegram.org,Global
 DOMAIN-SUFFIX,telegramdownload.com,Global
 DOMAIN-SUFFIX,telegraph.co.uk,Global
-DOMAIN-SUFFIX,telesco.pe,Global
 DOMAIN-SUFFIX,tellapart.com,Global
 DOMAIN-SUFFIX,tellme.pw,Global
 DOMAIN-SUFFIX,tenacy.com,Global
@@ -5018,11 +5000,6 @@ DOMAIN-SUFFIX,tibettimes.net,Global
 DOMAIN-SUFFIX,tibetwrites.org,Global
 DOMAIN-SUFFIX,ticket.com.tw,Global
 DOMAIN-SUFFIX,tigervpn.com,Global
-DOMAIN-SUFFIX,tiktocdn.com,Global
-DOMAIN-SUFFIX,tiktok.com,Global
-DOMAIN-SUFFIX,tik-tokapi.com,Global
-DOMAIN-SUFFIX,tiktokcdn.com,Global
-DOMAIN-SUFFIX,tiktokv.com,Global
 DOMAIN-SUFFIX,tiltbrush.com,Global
 DOMAIN-SUFFIX,timdir.com,Global
 DOMAIN-SUFFIX,time.com,Global
@@ -5051,7 +5028,6 @@ DOMAIN-SUFFIX,tngrnow.net,Global
 DOMAIN-SUFFIX,tnp.org,Global
 DOMAIN-SUFFIX,togetter.com,Global
 DOMAIN-SUFFIX,toh.info,Global
-DOMAIN-SUFFIX,tokapi.com,Global
 DOMAIN-SUFFIX,tokyo-247.com,Global
 DOMAIN-SUFFIX,tokyocn.com,Global
 DOMAIN-SUFFIX,tokyo-hot.com,Global
@@ -5679,7 +5655,6 @@ DOMAIN-SUFFIX,wisdompubs.org,Global
 DOMAIN-SUFFIX,wisevid.com,Global
 DOMAIN-SUFFIX,wistia.com,Global
 DOMAIN-SUFFIX,withgoogle.com,Global
-DOMAIN-SUFFIX,withyoutube.com,Global
 DOMAIN-SUFFIX,witnessleeteaching.com,Global
 DOMAIN-SUFFIX,witopia.net,Global
 DOMAIN-SUFFIX,wizcrafts.net,Global
@@ -5907,8 +5882,6 @@ DOMAIN-SUFFIX,youshun12.com,Global
 DOMAIN-SUFFIX,youthforfreechina.org,Global
 DOMAIN-SUFFIX,youthnetradio.org,Global
 DOMAIN-SUFFIX,youthwant.com.tw,Global
-DOMAIN-SUFFIX,youtu.be,Global
-DOMAIN-SUFFIX,youtube.com,Global
 DOMAIN-SUFFIX,youtubecn.com,Global
 DOMAIN-SUFFIX,youtubeeducation.com,Global
 DOMAIN-SUFFIX,youtubegaming.com,Global
@@ -5918,9 +5891,7 @@ DOMAIN-SUFFIX,youversion.com,Global
 DOMAIN-SUFFIX,youwin.com,Global
 DOMAIN-SUFFIX,youxu.info,Global
 DOMAIN-SUFFIX,ypncdn.com,Global
-DOMAIN-SUFFIX,yt.be,Global
 DOMAIN-SUFFIX,ytht.net,Global
-DOMAIN-SUFFIX,ytimg.com,Global
 DOMAIN-SUFFIX,ytn.co.kr,Global
 DOMAIN-SUFFIX,yuanming.net,Global
 DOMAIN-SUFFIX,yuanzhengtang.org,Global
