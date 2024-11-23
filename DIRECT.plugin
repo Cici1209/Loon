@@ -3,6 +3,12 @@
 #!author=Cici_WongYS
 
 [Rule]
+# DNS
+DOMAIN-SUFFIX,dns.alidns.com,DIRECT
+DOMAIN-SUFFIX,doh.pub,DIRECT
+DOMAIN-SUFFIX,doh.360.cn,DIRECT
+IP-CIDR,1.12.12.12/32,DIRECT,no-resolve
+
 DOMAIN,analytics.strava.com,DIRECT
 DOMAIN,app.adjust.com,DIRECT
 DOMAIN,bdtj.tagtic.cn,DIRECT
@@ -246,9 +252,6 @@ DOMAIN-SUFFIX,dl.google.com,DIRECT
 DOMAIN-SUFFIX,dl.l.google.com,DIRECT
 DOMAIN-SUFFIX,dl.steam.clngaa.com,DIRECT
 DOMAIN-SUFFIX,dl.steam.ksyna.com,DIRECT
-DOMAIN-SUFFIX,dns.alidns.com,DIRECT
-DOMAIN-SUFFIX,doh.360.cn,DIRECT
-DOMAIN-SUFFIX,doh.pub,DIRECT
 DOMAIN-SUFFIX,dota2.wmsj.cn,DIRECT
 DOMAIN-SUFFIX,douban.com,DIRECT
 DOMAIN-SUFFIX,doubanio.com,DIRECT
@@ -922,7 +925,6 @@ IP-CIDR,1.10.64.0/18,DIRECT,no-resolve
 IP-CIDR,1.10.8.0/23,DIRECT,no-resolve
 IP-CIDR,1.116.0.0/14,DIRECT,no-resolve
 IP-CIDR,1.12.0.0/14,DIRECT,no-resolve
-IP-CIDR,1.12.12.12/32,DIRECT,no-resolve
 IP-CIDR,1.18.128.0/24,DIRECT,no-resolve
 IP-CIDR,1.180.0.0/14,DIRECT,no-resolve
 IP-CIDR,1.184.0.0/15,DIRECT,no-resolve
