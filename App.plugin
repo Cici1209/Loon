@@ -170,6 +170,7 @@ IP-CIDR,65.199.22.0/23,Apple,no-resolve
 # Spotify
 DOMAIN-KEYWORD,spotify,Spotify
 DOMAIN-SUFFIX,spotify.com,Spotify
+USER-AGENT,Spotify*,Spotify
 # ---------------------------------------
 # Telegram
 # > Swiftgram
