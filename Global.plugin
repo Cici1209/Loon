@@ -5875,10 +5875,6 @@ DOMAIN-SUFFIX,youthforfreechina.org,Global
 DOMAIN-SUFFIX,youthnetradio.org,Global
 DOMAIN-SUFFIX,youthwant.com.tw,Global
 DOMAIN-SUFFIX,youtubecn.com,Global
-DOMAIN-SUFFIX,youtubeeducation.com,Global
-DOMAIN-SUFFIX,youtubegaming.com,Global
-DOMAIN-SUFFIX,youtubekids.com,Global
-DOMAIN-SUFFIX,youtube-nocookie.com,Global
 DOMAIN-SUFFIX,youversion.com,Global
 DOMAIN-SUFFIX,youwin.com,Global
 DOMAIN-SUFFIX,youxu.info,Global
@@ -6034,7 +6030,6 @@ IP-CIDR,103.27.148.0/22,Global,no-resolve
 IP-CIDR,103.4.96.0/22,Global,no-resolve
 IP-CIDR,108.168.174.0/16,Global,no-resolve
 IP-CIDR,108.175.32.0/20,Global,no-resolve
-IP-CIDR,109.239.140.0/24,Global,no-resolve
 IP-CIDR,110.76.140.0/22,Global,no-resolve
 IP-CIDR,113.61.104.0/22,Global,no-resolve
 IP-CIDR,119.235.224.0/21,Global,no-resolve
@@ -6059,7 +6054,6 @@ IP-CIDR,13.32.0.0/15,Global,no-resolve
 IP-CIDR,13.35.0.0/17,Global,no-resolve
 IP-CIDR,14.102.250.18/31,Global,no-resolve
 IP-CIDR,147.92.128.0/17,Global,no-resolve
-IP-CIDR,149.154.160.0/20,Global,no-resolve
 IP-CIDR,157.240.0.0/17,Global,no-resolve
 IP-CIDR,158.85.224.160/27,Global,no-resolve
 IP-CIDR,158.85.46.128/27,Global,no-resolve
@@ -6151,9 +6145,5 @@ IP-CIDR,74.86.0.0/16,Global,no-resolve
 IP-CIDR,75.126.0.0/16,Global,no-resolve
 IP-CIDR,75.126.150.0/16,Global,no-resolve
 IP-CIDR,91.105.192.0/23,Global,no-resolve
-IP-CIDR,91.108.0.0/16,Global,no-resolve
-IP-CIDR6,2001:67c:4e8::/48,Global,no-resolve
 IP-CIDR6,2001:b28:f23c::/47,Global,no-resolve
-IP-CIDR6,2001:b28:f23d::/48,Global,no-resolve
-IP-CIDR6,2001:b28:f23f::/48,Global,no-resolve
 IP-CIDR6,2a0a:f280::/32,Global,no-resolve
