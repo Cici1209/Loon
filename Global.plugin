@@ -24,7 +24,6 @@ DOMAIN-KEYWORD,dlercloud,Global
 DOMAIN-KEYWORD,dropbox,Global
 DOMAIN-KEYWORD,facebook,Global
 DOMAIN-KEYWORD,fbcdn,Global
-DOMAIN-KEYWORD,github,Global
 DOMAIN-KEYWORD,gmail,Global
 DOMAIN-KEYWORD,google,Global
 DOMAIN-KEYWORD,instagram,Global
@@ -1953,11 +1952,6 @@ DOMAIN-SUFFIX,girlbanker.com,Global
 DOMAIN-SUFFIX,gitbooks.io,Global
 DOMAIN-SUFFIX,githack.com,Global
 DOMAIN-SUFFIX,github.blog,Global
-DOMAIN-SUFFIX,github.com,Global
-DOMAIN-SUFFIX,github.io,Global
-DOMAIN-SUFFIX,githubapp.com,Global
-DOMAIN-SUFFIX,githubassets.com,Global
-DOMAIN-SUFFIX,githubusercontent.com,Global
 DOMAIN-SUFFIX,gitlab.com,Global
 DOMAIN-SUFFIX,gitlab.io,Global
 DOMAIN-SUFFIX,gizlen.net,Global
