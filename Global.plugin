@@ -5972,6 +5972,7 @@ DOMAIN-SUFFIX,zyzc9.com,Global
 DOMAIN-SUFFIX,zzcartoon.com,Global
 DOMAIN-SUFFIX,zzcloud.me,Global
 DOMAIN-SUFFIX,zzux.com,Global
+
 USER-AGENT,AbemaTV*,Global
 USER-AGENT,All4*,Global
 USER-AGENT,Anime*,Global
@@ -6144,5 +6145,6 @@ IP-CIDR,74.86.0.0/16,Global,no-resolve
 IP-CIDR,75.126.0.0/16,Global,no-resolve
 IP-CIDR,75.126.150.0/16,Global,no-resolve
 IP-CIDR,91.105.192.0/23,Global,no-resolve
+
 IP-CIDR6,2001:b28:f23c::/47,Global,no-resolve
 IP-CIDR6,2a0a:f280::/32,Global,no-resolve
