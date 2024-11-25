@@ -29,6 +29,30 @@ DOMAIN,guzzoni.smoot.apple.com,DIRECT
 DOMAIN-SUFFIX,api-*.smoot.apple.com,DIRECT
 # ---------------------------------------
 # 全球拦截
+# 屏蔽第三方家宽PCDN，走官方CDN
+DOMAIN-SUFFIX,gjfzpt.cn,REJECT
+DOMAIN-SUFFIX,szbdyd.com,REJECT
+DOMAIN-SUFFIX,bsccdn.net,REJECT
+DOMAIN-SUFFIX,pkoplink.com,REJECT
+DOMAIN-SUFFIX,saxysec.com,REJECT
+DOMAIN-SUFFIX,uhabo.com,REJECT
+DOMAIN-SUFFIX,xycdn.com,REJECT
+DOMAIN-SUFFIX,kuiniuca.com,REJECT
+DOMAIN-SUFFIX,onethingpcs.com,REJECT
+DOMAIN-SUFFIX,jomodns.cn,REJECT
+DOMAIN-SUFFIX,p2p.huya.com,REJECT
+DOMAIN,stun.douyucdn.cn,REJECT
+DOMAIN,stun.hitv.com,REJECT
+DOMAIN,stun1.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
+DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com,REJECT
+DOMAIN-SUFFIX,pcdn.xmcdn.com,REJECT
+DOMAIN-REGEX,.*pcdn.*biliapi\.net,REJECT
+DOMAIN-REGEX,.*pcdn.*youku\.com,REJECT
+DOMAIN-REGEX,.*p2p.*douyucdn\.cn,REJECT
+DOMAIN-REGEX,.*p2p.*qq\.com,REJECT
+DOMAIN,pcdn.yximgs.com
+
 # > 屏蔽iOS更新
 DOMAIN,gdmf.apple.com,REJECT
 DOMAIN,xp.apple.com,REJECT
