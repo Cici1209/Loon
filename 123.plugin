@@ -1,16 +1,12 @@
-#!name =  iRingo: 📍 Location
-#!desc = 自定义「定位服务」\n通过「基于网络的地区检测」结果始终为用户设置的地区。
-#!openUrl = http://boxjs.com/#/app/iRingo.Location
-#!author = VirgilClyne[https://github.com/VirgilClyne]
-#!homepage = https://NSRingo.github.io/guide/GeoServices/location
-#!icon = https://images.macrumors.com/article-new/2019/07/ios_location_services-250x250.jpg
-#!tag =  iRingo
-#!system = iOS,iPadOS,macOS
-#!system_version = 15
+#!name=iRingo Collection
+#!desc=iRingo合集：Location、Maps、WeatherKit、Siri
+#!author=Cici_WongYS
 
 [Argument]
+# Location
 PEP.GCC = select,"US","AUTO","HK","TW","SG","US","JP","AU","GB","KR","CA","IE",tag=[地区检测] 地理国家或地区代码,desc=要更改为的地区或国家，此选项影响Wi-Fi或有线网络下国家和地区检测的结果。
 
+# Maps
 GeoManifest.Dynamic.Config.CountryCode = select,"CN","AUTO","HK","TW","SG","US","JP","AU","GB","KR","CA","IE",tag=[动态配置] 资源清单的国家或地区代码,desc=此选项影响“地图”整体配置内容，包括以下的地图功能与服务。
 UrlInfoSet.Dispatcher = select,"AutoNavi","AUTO","Apple",tag=[URL信息集] 调度器,desc=地点数据接口，此选项影响公共指南，兴趣点(POI)与位置信息等功能。
 UrlInfoSet.Directions = select,"AutoNavi","AUTO","Apple",tag=[URL信息集] 导航与ETA,desc=导航与ETA服务接口，此选项影响导航与ETA(到达时间)等功能。
@@ -20,6 +16,7 @@ TileSet.Satellite = select,"HYBRID","AUTO","CN","XX",tag=[瓦片数据集] 卫�
 TileSet.Flyover = select,"XX","AUTO","CN",tag=[瓦片数据集] 飞行俯瞰,desc=此选项影响飞行俯瞰全球各地的主要地标和城市功能。
 TileSet.Munin = select,"XX","AUTO","CN",tag=[瓦片数据集] 四处看看,desc=此选项影响 360 度全景视角在某些地点四处看看功能。
 
+# WeatherKit
 NextHour.Provider = select,"ColorfulClouds","WeatherKit","QWeather",tag=[未来一小时降水强度] 数据源,desc=始终会使用选定的数据源，填补无降水监测地区的数据。
 AQI.Provider = select,"ColorfulClouds","WeatherKit","QWeather","WAQI",tag=[空气质量] 数据源,desc=始终会使用选定的数据源，填补无空气质量监测地区的数据。
 AQI.ReplaceProviders = input,"QWeather",tag=[空气质量] 需要替换的供应商,desc=选中的空气质量数据源会被替换。
@@ -31,40 +28,66 @@ API.QWeather.Host = select,"devapi.qweather.com","api.qweather.com",tag=[API] �
 API.QWeather.Token = input,"",tag=[API] 和风天气令牌,desc=和风天气 API 令牌
 API.WAQI.Token = input,"",tag=[API] WAQI 令牌,desc=WAQI API 令牌，填写此字段将自动使用WAQI高级API
 
-
 [Rule]
-# 📍 Country Code
+# Location
+# > 📍 Country Code
 DOMAIN,gspe1-ssl.ls.apple.com,DIRECT
 
-# 🗺️ Tiles
+# Maps
+# > 🗺️ Tiles
 DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
-# 🗺️ Dispatcher
+# > 🗺️ Dispatcher
 DOMAIN,dispatcher.is.autonavi.com,DIRECT
-# 🗺️ Directions & ETA
+# > 🗺️ Directions & ETA
 DOMAIN,direction2.is.autonavi.com,DIRECT
 
+# WeatherKit
 DOMAIN,weather-analytics-events.apple.com,REJECT-DROP
 DOMAIN-SUFFIX,tthr.apple.com,REJECT-DROP
 
 [Script]
-# 📍 Country Code
+# Location
+# > 📍 Country Code
 http-response ^https?:\/\/gspe1-ssl\.ls\.apple\.com\/pep\/gcc script-path=https://github.com/NSRingo/GeoServices/releases/latest/download/response.bundle.js, requires-body=1, tag=📍 Location.pep.gcc.response, argument=[{PEP.GCC}]
 
-# 🗺️ Network Defaults
+# Maps
+# > 🗺️ Network Defaults
 http-request ^https?:\/\/configuration\.ls\.apple\.com\/config\/defaults script-path=https://github.com/NSRingo/GeoServices/releases/download/v4.1.2/request.bundle.js, tag=🗺️ Maps.config.defaults.request, argument=[{GeoManifest.Dynamic.Config.CountryCode},{UrlInfoSet.Dispatcher},{UrlInfoSet.Directions},{UrlInfoSet.RAP},{UrlInfoSet.LocationShift},{TileSet.Satellite},{TileSet.Flyover},{TileSet.Munin}]
 http-response ^https?:\/\/configuration\.ls\.apple\.com\/config\/defaults script-path=https://github.com/NSRingo/GeoServices/releases/download/v4.1.2/response.bundle.js, requires-body=1, tag=🗺️ Maps.config.defaults.response, argument=[{GeoManifest.Dynamic.Config.CountryCode},{UrlInfoSet.Dispatcher},{UrlInfoSet.Directions},{UrlInfoSet.RAP},{UrlInfoSet.LocationShift},{TileSet.Satellite},{TileSet.Flyover},{TileSet.Munin}]
-# 🗺️ Announcements
+# > 🗺️ Announcements
 http-request ^https?:\/\/gspe35-ssl\.ls\.apple\.(com|cn)\/config\/announcements script-path=https://github.com/NSRingo/GeoServices/releases/download/v4.1.2/request.bundle.js, tag=🗺️ Maps.config.announcements.request, argument=[{GeoManifest.Dynamic.Config.CountryCode},{UrlInfoSet.Dispatcher},{UrlInfoSet.Directions},{UrlInfoSet.RAP},{UrlInfoSet.LocationShift},{TileSet.Satellite},{TileSet.Flyover},{TileSet.Munin}]
 http-response ^https?:\/\/gspe35-ssl\.ls\.apple\.(com|cn)\/config\/announcements script-path=https://github.com/NSRingo/GeoServices/releases/download/v4.1.2/response.bundle.js, requires-body=1, binary-body-mode=1, tag=🗺️ Maps.config.announcements.response, argument=[{GeoManifest.Dynamic.Config.CountryCode},{UrlInfoSet.Dispatcher},{UrlInfoSet.Directions},{UrlInfoSet.RAP},{UrlInfoSet.LocationShift},{TileSet.Satellite},{TileSet.Flyover},{TileSet.Munin}]
-# 🗺️ Resource Manifest
+# > 🗺️ Resource Manifest
 http-request ^https?:\/\/gspe35-ssl\.ls\.apple\.(com|cn)\/geo_manifest\/dynamic\/config script-path=https://github.com/NSRingo/GeoServices/releases/download/v4.1.2/request.bundle.js, tag=🗺️ Maps.config.announcements.request, argument=[{GeoManifest.Dynamic.Config.CountryCode},{UrlInfoSet.Dispatcher},{UrlInfoSet.Directions},{UrlInfoSet.RAP},{UrlInfoSet.LocationShift},{TileSet.Satellite},{TileSet.Flyover},{TileSet.Munin}]
 http-response ^https?:\/\/gspe35-ssl\.ls\.apple\.(com|cn)\/geo_manifest\/dynamic\/config script-path=https://github.com/NSRingo/GeoServices/releases/download/v4.1.2/response.bundle.js, requires-body=1, binary-body-mode=1, tag=🗺️ Maps.geo_manifest.dynamic.config.response, argument=[{GeoManifest.Dynamic.Config.CountryCode},{UrlInfoSet.Dispatcher},{UrlInfoSet.Directions},{UrlInfoSet.RAP},{UrlInfoSet.LocationShift},{TileSet.Satellite},{TileSet.Flyover},{TileSet.Munin}]
 
+# WeatherKit
 http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/ requires-body=1, script-path=https://github.com/NSRingo/WeatherKit/releases/download/v1.9.1/response.bundle.js, tag=🌤 WeatherKit.api.v1.availability.response, argument=[{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token}]
 http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/ requires-body=1, binary-body-mode=1, script-path=https://github.com/NSRingo/WeatherKit/releases/download/v1.9.1/response.bundle.js, tag=🌤 WeatherKit.api.v2.weather.response, argument=[{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token}]
 
+# Siri
+# > Apple.Parsec.Siri.V2Alpha.SiriSearch
+http-request ^https?:\/\/(guzzoni|api2|api-.*)\.smoot\.apple\.com\/apple\.parsec\.siri\.v2alpha\.SiriSearch\/SiriSearch script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/request.bundle.js, requires-body=true, binary-body-mode=true, tag=⭕ Siri.SiriSearch.request, argument=CountryCode=US
+http-response ^https?:\/\/(guzzoni|api2|api-.*)\.smoot\.apple\.com\/apple\.parsec\.siri\.v2alpha\.SiriSearch\/SiriSearch script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/response.bundle.js, requires-body=true, binary-body-mode=true, tag=⭕ Siri.SiriSearch.response, argument=CountryCode=US
+
+# > Apple.Parsec.Lookup.V1Alpha.LookupSearch
+http-request ^https?:\/\/(api-lookup|api2|api-.*)\.smoot\.apple\.com\/apple\.parsec\.lookup\.v1alpha\.LookupSearch\/LookupSearch script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/request.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 Lookup.LookupSearch.request, argument=CountryCode=US
+http-response ^https?:\/\/(api-lookup|api2|api-.*)\.smoot\.apple\.com\/apple\.parsec\.lookup\.v1alpha\.LookupSearch\/LookupSearch script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/response.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 Lookup.LookupSearch.response, argument=CountryCode=US
+
+# > Apple.Parsec.Visualsearch.V2.VisualSearch
+http-request ^https?:\/\/(api2|api-.*)\.smoot\.apple\.com\/apple\.parsec\.visualsearch\.v2\.VisualSearch\/VisualSearch script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/request.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 Visualsearch.VisualSearch.request, argument=CountryCode=US
+http-response ^https?:\/\/(api2|api-.*)\.smoot\.apple\.com\/apple\.parsec\.visualsearch\.v2\.VisualSearch\/VisualSearch script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/response.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 Visualsearch.VisualSearch.response, argument=CountryCode=US
+
+# > Apple.Parsec.ResponseFramework.Engagement.V1Alpha.EngagementSearch
+http-request ^https?:\/\/(api-.*)\.smoot\.apple\.com\/apple\.parsec\.responseframework\.engagement\.v1alpha\.EngagementSearch\/EngagementSearch script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/request.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 ResponseFramework.Engagement.EngagementSearch.request, argument=CountryCode=US
+http-response ^https?:\/\/(api-.*)\.smoot\.apple\.com\/apple\.parsec\.responseframework\.engagement\.v1alpha\.EngagementSearch\/EngagementSearch script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/response.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 ResponseFramework.Engagement.EngagementSearch.response, argument=CountryCode=US
+
+# > Apple.Parsec.Spotlight.V1Alpha.ZkwSuggestService
+http-request ^https?:\/\/(api-.*)\.smoot\.apple\.com\/apple\.parsec\.spotlight\.v1alpha\.ZkwSuggestService\/Suggest script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/request.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 Spotlight.ZkwSuggestService.request, argument=CountryCode=US
+http-response ^https?:\/\/(api-.*)\.smoot\.apple\.com\/apple\.parsec\.spotlight\.v1alpha\.ZkwSuggestService\/Suggest script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/response.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 Spotlight.ZkwSuggestService.response, argument=CountryCode=US
+
 
 [MITM]
-hostname = gspe1-ssl.ls.apple.com, configuration.ls.apple.com, gspe35-ssl.ls.apple.com, weatherkit.apple.com
+hostname = gspe1-ssl.ls.apple.com, configuration.ls.apple.com, gspe35-ssl.ls.apple.com, weatherkit.apple.com, guzzoni.smoot.apple.com, api2.smoot.apple.com, api-*.smoot.apple.com
 
 
