@@ -44,6 +44,8 @@ DOMAIN,sky.ash.wf,DIRECT
 
 # > Uni Dream
 DOMAIN-SUFFIX,guangzhuiyuan.com,DIRECT
+
+DOMAIN-SUFFIX,.cn,DIRECT
 # ---------------------------------------
 # AI
 # > ChatGPT
