@@ -49,93 +49,90 @@ DOMAIN-SUFFIX,.cn,DIRECT
 # ---------------------------------------
 # AI
 # > ChatGPT
-AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-eastus-), (DOMAIN-KEYWORD, .webpubsub.azure.com)),AI
-DOMAIN, chat.openai.com.cdn.cloudflare.net,AI
-DOMAIN, o33249.ingest.sentry.io,AI
-DOMAIN, openaiapi-site.azureedge.net,AI
-DOMAIN, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,AI
-DOMAIN, openaicom.imgix.net,AI
-DOMAIN, openaicomproductionae4b.blob.core.windows.net,AI
-DOMAIN, production-openaicom-storage.azureedge.net,AI
-DOMAIN-SUFFIX, chatgpt.com,AI
-DOMAIN-SUFFIX, oaistatic.com,AI
-DOMAIN-SUFFIX, oaiusercontent.com,AI
-DOMAIN-SUFFIX, openai.com,AI
+AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-eastus-), (DOMAIN-KEYWORD, .webpubsub.azure.com)), AI
+DOMAIN, chat.openai.com.cdn.cloudflare.net, AI
+DOMAIN, o33249.ingest.sentry.io, AI
+DOMAIN, openaiapi-site.azureedge.net, AI
+DOMAIN, openaicom.imgix.net, AI
+DOMAIN, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net, AI
+DOMAIN, openaicomproductionae4b.blob.core.windows.net, AI
+DOMAIN, production-openaicom-storage.azureedge.net, AI
+DOMAIN-SUFFIX, ai.com, AI
+DOMAIN-SUFFIX, cdn.oaistatic.com, AI
+DOMAIN-SUFFIX, chatgpt.com, AI
+DOMAIN-SUFFIX, oaistatic.com, AI
+DOMAIN-SUFFIX, oaiusercontent.com, AI
+DOMAIN-SUFFIX, openai.com, AI
+
+# > Claude
+DOMAIN-SUFFIX, anthropic.com, AI
+DOMAIN-SUFFIX, claude.ai, AI
+IP-CIDR, 160.79.104.0/23, AI, no-resolve
+IP-CIDR6, 2607:6bc0::/48, AI, no-resolve
 
 # > Copilot
-DOMAIN, api.githubcopilot.com,AI
-DOMAIN, copilot-proxy.githubusercontent.com,AI
-DOMAIN, copilot.microsoft.com,AI
-DOMAIN, sydney.bing.com,AI
-DOMAIN, www.bing.com,AI
+DOMAIN, api.githubcopilot.com, AI
+DOMAIN, api.individual.githubcopilot.com, AI
+DOMAIN, copilot.microsoft.com, AI
+DOMAIN, copilot-proxy.githubusercontent.com, AI
+DOMAIN, sydney.bing.com, AI
+DOMAIN, www.bing.com, AI
 
 # > Gemini
-DOMAIN, bard.google.com,AI
-DOMAIN, gemini.google.com,AI
-DOMAIN, generativelanguage.googleapis.com,AI
-DOMAIN, ai.google.dev,AI
-DOMAIN, aida.googleapis.com,AI
-DOMAIN, aistudio.google.com,AI
-DOMAIN, alkalimakersuite-pa.clients6.google.com,AI
-DOMAIN, makersuite.google.com,AI
+DOMAIN, ai.google.dev, AI
+DOMAIN, aida.googleapis.com, AI
+DOMAIN, aistudio.google.com, AI
+DOMAIN, alkalimakersuite-pa.clients6.google.com, AI
+DOMAIN, bard.google.com, AI
+DOMAIN, gemini.google.com, AI
+DOMAIN, generativelanguage.googleapis.com, AI
+DOMAIN, makersuite.google.com, AI
+DOMAIN, proactivebackend-pa.googleapis.com, AI
+DOMAIN-SUFFIX, gemini.google.com, AI
 
-# > Claude_Domain_Collection
-DOMAIN-SUFFIX, anthropic.com,AI
-DOMAIN-SUFFIX, claude.ai,AI
-
-# > Claude@IPV4
-IP-CIDR, 160.79.104.0/23,AI,no-resolve
-
-# > Claude@IPV6
-IP-CIDR6, 2607:6bc0::/48,AI,no-resolve
-
-# > JetBrains AI
-DOMAIN-SUFFIX, grazie.ai,AI
-DOMAIN-SUFFIX, grazie.aws.intellij.net,AI
+# > JetBrains
+DOMAIN-SUFFIX, grazie.ai, AI
+DOMAIN-SUFFIX, grazie.aws.intellij.net, AI
 
 # > Meta
-DOMAIN, imagine.meta.com,AI
-DOMAIN-SUFFIX, meta.ai,AI
+DOMAIN, imagine.meta.com, AI
+DOMAIN-SUFFIX, meta.ai, AI
 
-# > AI_Domain_Collection
-DOMAIN,browser-intake-datadoghq.com,AI
-DOMAIN,chat.openai.com.cdn.cloudflare.net,AI
-DOMAIN,openaiapi-site.azureedge.net,AI
-DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,AI
-DOMAIN,openaicomproductionae4b.blob.core.windows.net,AI
-DOMAIN,production-openaicom-storage.azureedge.net,AI
-DOMAIN,static.cloudflareinsights.com,AI
-DOMAIN-KEYWORD,chatgpt,AI
-DOMAIN-KEYWORD,openai,AI
-DOMAIN-SUFFIX,ai.com,AI
-DOMAIN-SUFFIX,algolia.net,AI
-DOMAIN-SUFFIX,api.statsig.com,AI
-DOMAIN-SUFFIX,auth0.com,AI
-DOMAIN-SUFFIX,chatgpt.com,AI
-DOMAIN-SUFFIX,chatgpt.livekit.cloud,AI
-DOMAIN-SUFFIX,client-api.arkoselabs.com,AI
-DOMAIN-SUFFIX,events.statsigapi.net,AI
-DOMAIN-SUFFIX,featuregates.org,AI
-DOMAIN-SUFFIX,host.livekit.cloud,AI
-DOMAIN-SUFFIX,identrust.com,AI
-DOMAIN-SUFFIX,intercom.io,AI
-DOMAIN-SUFFIX,intercomcdn.com,AI
-DOMAIN-SUFFIX,launchdarkly.com,AI
-DOMAIN-SUFFIX,oaistatic.com,AI
-DOMAIN-SUFFIX,oaiusercontent.com,AI
-DOMAIN-SUFFIX,observeit.net,AI
-DOMAIN-SUFFIX,openai.com,AI
-DOMAIN-SUFFIX,segment.io,AI
-DOMAIN-SUFFIX,sentry.io,AI
-DOMAIN-SUFFIX,stripe.com,AI
-DOMAIN-SUFFIX,turn.livekit.cloud,AI
+# > Perplexity
+DOMAIN-SUFFIX, perplexity.ai, AI
 
-# > AI@IPV4
-IP-CIDR,24.199.123.28/32,AI,no-resolve
-IP-CIDR,64.23.132.171/32,AI,no-resolve
+# > Siri
+DOMAIN, apple-relay.apple.com, AI
+DOMAIN, apple-relay.cloudflare.com, AI
+#DOMAIN, guzzoni.smoot.apple.com, AI(薯条插件有直连，测试ing）
+
+# > AI_Collection
+DOMAIN, browser-intake-datadoghq.com, AI
+DOMAIN, static.cloudflareinsights.com, AI
+DOMAIN-KEYWORD, chatgpt, AI
+DOMAIN-KEYWORD, openai, AI
+DOMAIN-SUFFIX, algolia.net, AI
+DOMAIN-SUFFIX, api.statsig.com, AI
+DOMAIN-SUFFIX, auth0.com, AI
+DOMAIN-SUFFIX, chatgpt.livekit.cloud, AI
+DOMAIN-SUFFIX, client-api.arkoselabs.com, AI
+DOMAIN-SUFFIX, events.statsigapi.net, AI
+DOMAIN-SUFFIX, featuregates.org, AI
+DOMAIN-SUFFIX, host.livekit.cloud, AI
+DOMAIN-SUFFIX, identrust.com, AI
+DOMAIN-SUFFIX, intercom.io, AI
+DOMAIN-SUFFIX, intercomcdn.com, AI
+DOMAIN-SUFFIX, launchdarkly.com, AI
+DOMAIN-SUFFIX, observeit.net, AI
+DOMAIN-SUFFIX, segment.io, AI
+DOMAIN-SUFFIX, sentry.io, AI
+DOMAIN-SUFFIX, stripe.com, AI
+DOMAIN-SUFFIX, turn.livekit.cloud, AI
+IP-CIDR, 24.199.123.28/32, AI, no-resolve
+IP-CIDR, 64.23.132.171/32, AI, no-resolve
 # ---------------------------------------
 # Apple
-# > Apple_Domain_Collection
+# > Apple_Collection
 DOMAIN,apple-relay.fastly-edge.com,Apple
 DOMAIN-SUFFIX,gateway.icloud.com,Apple
 DOMAIN,apple.comscoreresearch.com,Apple
@@ -156,8 +153,6 @@ DOMAIN-SUFFIX,icloud-content.com,Apple
 DOMAIN-SUFFIX,itunes.com,Apple
 DOMAIN-SUFFIX,me.com,Apple
 DOMAIN-SUFFIX,mzstatic.com,Apple
-
-# > Apple@IPV4
 IP-CIDR,139.178.128.0/18,Apple,no-resolve
 IP-CIDR,144.178.0.0/19,Apple,no-resolve
 IP-CIDR,144.178.36.0/22,Apple,no-resolve
@@ -178,20 +173,16 @@ USER-AGENT,Spotify*,Spotify
 # > Swiftgram
 DOMAIN-KEYWORD,swiftgram,Telegram
 
-# > Telegram_Domain_Collection
+# > Telegram_Collection
 DOMAIN-SUFFIX,t.me,Telegram
 DOMAIN-SUFFIX,tdesktop.com,Telegram
 DOMAIN-SUFFIX,telegra.ph,Telegram
 DOMAIN-SUFFIX,telegram.me,Telegram
 DOMAIN-SUFFIX,telegram.org,Telegram
 DOMAIN-SUFFIX,telesco.pe,Telegram
-
-# > Telegram@IPV4
 IP-CIDR,109.239.140.0/24,Telegram,no-resolve
 IP-CIDR,149.154.160.0/20,Telegram,no-resolve
 IP-CIDR,91.108.0.0/16,Telegram,no-resolve
-
-# > Telegram@IPV6
 IP-CIDR6,2001:67c:4e8::/48,Telegram,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,Telegram,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,Telegram,no-resolve
@@ -229,7 +220,7 @@ DOMAIN-SUFFIX,repo.new,GitHub
 DOMAIN-SUFFIX,thegithubshop.com,GitHub
 # ---------------------------------------
 # Bilibili
-# > Bilibili_Domain_Collection
+# > Bilibili_Collection
 DOMAIN,p.bstarstatic.com,Bilibili
 DOMAIN,p-bstarstatic.akamaized.net,Bilibili
 DOMAIN,upos-bstar1-mirrorakam.akamaized.net,Bilibili
@@ -251,8 +242,6 @@ DOMAIN-SUFFIX,bilivideo.com,Bilibili
 DOMAIN-SUFFIX,hdslb.com,Bilibili
 DOMAIN-SUFFIX,im9.com,Bilibili
 DOMAIN-SUFFIX,smtcdns.net,Bilibili
-
-# > Bilibili@IPV4
 IP-CIDR,119.29.29.29/32,Bilibili,no-resolve
 IP-CIDR,128.1.62.200/32,Bilibili,no-resolve
 IP-CIDR,128.1.62.201/32,Bilibili,no-resolve
