@@ -27,7 +27,7 @@ API.ColorfulClouds.Token = input,"",tag=[API] 彩云天气令牌,desc=彩云天�
 API.QWeather.Host = select,"devapi.qweather.com","api.qweather.com",tag=[API] 和风天气主机,desc=和风天气 API 使用的主机名
 API.QWeather.Token = input,"",tag=[API] 和风天气令牌,desc=和风天气 API 令牌
 API.WAQI.Token = input,"",tag=[API] WAQI 令牌,desc=WAQI API 令牌，填写此字段将自动使用WAQI高级API
-
+# ---------------------------------------
 [Rule]
 # Location
 # > 📍 Country Code
@@ -44,7 +44,7 @@ DOMAIN,direction2.is.autonavi.com,DIRECT
 # WeatherKit
 DOMAIN,weather-analytics-events.apple.com,REJECT-DROP
 DOMAIN-SUFFIX,tthr.apple.com,REJECT-DROP
-
+# ---------------------------------------
 [Script]
 # Location
 # > 📍 Country Code
@@ -87,7 +87,7 @@ http-response ^https?:\/\/(api-.*)\.smoot\.apple\.com\/apple\.parsec\.responsefr
 # > Apple.Parsec.Spotlight.V1Alpha.ZkwSuggestService
 http-request ^https?:\/\/(api-.*)\.smoot\.apple\.com\/apple\.parsec\.spotlight\.v1alpha\.ZkwSuggestService\/Suggest script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/request.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 Spotlight.ZkwSuggestService.request, argument=CountryCode=US
 http-response ^https?:\/\/(api-.*)\.smoot\.apple\.com\/apple\.parsec\.spotlight\.v1alpha\.ZkwSuggestService\/Suggest script-path=https://raw.githubusercontent.com/NSRingo/Siri/dev/debug/response.bundle.js, requires-body=true, binary-body-mode=true, tag=🔍 Spotlight.ZkwSuggestService.response, argument=CountryCode=US
-
+# ---------------------------------------
 [MITM]
 hostname = gspe1-ssl.ls.apple.com, configuration.ls.apple.com, gspe35-ssl.ls.apple.com, weatherkit.apple.com, guzzoni.smoot.apple.com, api2.smoot.apple.com, api-*.smoot.apple.com
 
