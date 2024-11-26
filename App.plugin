@@ -3,7 +3,7 @@
 #!author=Cici_WongYS
 
 [Rule]
-#------------------------------------
+# -----------------------------------
 # 薯条插件
 # > iRingo：Location
 DOMAIN,gspe1-ssl.ls.apple.com,DIRECT
@@ -27,7 +27,7 @@ DOMAIN,weather-map2.apple.com,DIRECT
 DOMAIN,api2.smoot.apple.com,DIRECT
 DOMAIN,guzzoni.smoot.apple.com,DIRECT
 DOMAIN-SUFFIX,api-*.smoot.apple.com,DIRECT
-#------------------------------------
+# -----------------------------------
 # 全球拦截
 # > 屏蔽iOS更新
 DOMAIN,gdmf.apple.com,REJECT
@@ -37,13 +37,12 @@ DOMAIN,xp.apple.com,REJECT
 DOMAIN,crash.xiaohongshu.com,REJECT
 DOMAIN,referee.xiaohongshu.com,REJECT
 DOMAIN,fp-it.fengkongcloud.com,REJECT
-#------------------------------------
+# -----------------------------------
 # 全球直连
 # >ASH VPN
 DOMAIN,sky.ash.wf,DIRECT
-
 DOMAIN-SUFFIX,.cn,DIRECT
-#------------------------------------
+# -----------------------------------
 # AI
 # > ChatGPT
 AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-eastus-), (DOMAIN-KEYWORD, .webpubsub.azure.com)), AI
@@ -127,7 +126,7 @@ DOMAIN-SUFFIX, stripe.com, AI
 DOMAIN-SUFFIX, turn.livekit.cloud, AI
 IP-CIDR, 24.199.123.28/32, AI, no-resolve
 IP-CIDR, 64.23.132.171/32, AI, no-resolve
-#------------------------------------
+# -----------------------------------
 # Apple
 # > Apple_Collection
 DOMAIN,apple-relay.fastly-edge.com,Apple
@@ -160,12 +159,12 @@ IP-CIDR,198.183.17.0/24,Apple,no-resolve
 IP-CIDR,205.180.175.0/24,Apple,no-resolve
 IP-CIDR,63.92.224.0/19,Apple,no-resolve
 IP-CIDR,65.199.22.0/23,Apple,no-resolve
-#------------------------------------
+# -----------------------------------
 # Spotify
 DOMAIN-KEYWORD,spotify,Spotify
 DOMAIN-SUFFIX,spotify.com,Spotify
 USER-AGENT,Spotify*,Spotify
-#------------------------------------
+# -----------------------------------
 # Telegram
 # > Swiftgram
 DOMAIN-KEYWORD,swiftgram,Telegram
@@ -183,7 +182,7 @@ IP-CIDR,91.108.0.0/16,Telegram,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,Telegram,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,Telegram,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,Telegram,no-resolve
-#------------------------------------
+# -----------------------------------
 # GitHub
 DOMAIN-KEYWORD,github,GitHub
 DOMAIN-SUFFIX,atom.io,GitHub
@@ -215,7 +214,7 @@ DOMAIN-SUFFIX,rawgit.com,GitHub
 DOMAIN-SUFFIX,rawgithub.com,GitHub
 DOMAIN-SUFFIX,repo.new,GitHub
 DOMAIN-SUFFIX,thegithubshop.com,GitHub
-#------------------------------------
+# -----------------------------------
 # Bilibili
 # > Bilibili_Collection
 DOMAIN,p.bstarstatic.com,Bilibili
@@ -249,7 +248,7 @@ IP-CIDR,203.107.1.34/32,Bilibili,no-resolve
 IP-CIDR,203.107.1.65/32,Bilibili,no-resolve
 IP-CIDR,203.107.1.66/32,Bilibili,no-resolve
 IP-CIDR,45.43.32.234/32,Bilibili,no-resolve
-#------------------------------------
+# -----------------------------------
 # YouTube
 DOMAIN,youtubei.googleapis.com,YouTube
 DOMAIN,yt3.ggpht.com,YouTube
@@ -265,7 +264,7 @@ DOMAIN-SUFFIX,youtubekids.com,YouTube
 DOMAIN-SUFFIX,youtube-nocookie.com,YouTube
 DOMAIN-SUFFIX,yt.be,YouTube
 DOMAIN-SUFFIX,ytimg.com,YouTube
-#------------------------------------
+# -----------------------------------
 # TikTok
 DOMAIN-SUFFIX,appsflyersdk.com,TikTok
 DOMAIN-SUFFIX,byteoversea.com,TikTok
@@ -280,10 +279,10 @@ DOMAIN-SUFFIX,tik-tokapi.com,TikTok
 DOMAIN-SUFFIX,tiktokcdn.com,TikTok
 DOMAIN-SUFFIX,tiktokv.com,TikTok
 DOMAIN-SUFFIX,tokapi.com,TikTok
-#------------------------------------
+# -----------------------------------
 # GlobalMedia
-#------------------------------------
+# -----------------------------------
 # Global
 # > 网站 whois
 DOMAIN,www.whois.com,Global
-#------------------------------------
+# -----------------------------------
