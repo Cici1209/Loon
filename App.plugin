@@ -29,6 +29,8 @@ DOMAIN,guzzoni.smoot.apple.com,DIRECT
 DOMAIN-SUFFIX,api-*.smoot.apple.com,DIRECT
 # -----------------------------------
 # 全球拦截
+AND,((OR,((PROTOCOL,UDP), (PROTOCOL,QUIC))), (DEST-PORT,443)),REJECT-NO-DROP
+
 # > 屏蔽iOS更新
 DOMAIN,gdmf.apple.com,REJECT
 DOMAIN,xp.apple.com,REJECT
