@@ -67,6 +67,7 @@ DOMAIN,fp-it.fengkongcloud.com,REJECT
 DOMAIN,sky.ash.wf,DIRECT
 
 # > Uni Dream
+DOMAIN-KEYWORD,baidubce,REJECT
 DOMAIN-SUFFIX,guangzhuiyuan.com,DIRECT
 
 DOMAIN-SUFFIX,.cn,DIRECT
