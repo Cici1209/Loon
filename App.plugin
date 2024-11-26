@@ -291,3 +291,5 @@ DOMAIN-SUFFIX,kelee.one,Global
 # > 网站 whois
 DOMAIN,www.whois.com,Global
 # -----------------------------------
+[Remote Rule]
+https://kelee.one/Tool/Loon/Rule/CN_REGION, policy=DIRECT, tag=CN_REGION, enabled=true
