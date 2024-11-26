@@ -283,6 +283,9 @@ DOMAIN-SUFFIX,tokapi.com,TikTok
 # GlobalMedia
 # -----------------------------------
 # Global
+# > 可莉插件
+DOMAIN-SUFFIX,kelee.one,Global
+
 # > 网站 whois
 DOMAIN,www.whois.com,Global
 # -----------------------------------
