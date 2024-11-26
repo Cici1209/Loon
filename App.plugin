@@ -43,7 +43,14 @@ DOMAIN,fp-it.fengkongcloud.com,REJECT
 # 全球直连
 # > ASH VPN
 DOMAIN,sky.ash.wf,DIRECT
+
+# > 匹配.cn顶级域名
 DOMAIN-SUFFIX,.cn,DIRECT
+
+# GEOIP 不作DNS解析
+GEOIP,CN,DIRECT,no-resolve
+
+GEOIP,CN,DIRECT
 # -----------------------------------
 # AI
 # > ChatGPT
@@ -291,5 +298,3 @@ DOMAIN-SUFFIX,kelee.one,Global
 # > 网站 whois
 DOMAIN,www.whois.com,Global
 # -----------------------------------
-[Remote Rule]
-https://kelee.one/Tool/Loon/Rule/CN_REGION, policy=DIRECT, tag=CN_REGION, enabled=true
