@@ -39,7 +39,7 @@ DOMAIN,referee.xiaohongshu.com,REJECT
 DOMAIN,fp-it.fengkongcloud.com,REJECT
 # -----------------------------------
 # 全球直连
-# >ASH VPN
+# > ASH VPN
 DOMAIN,sky.ash.wf,DIRECT
 DOMAIN-SUFFIX,.cn,DIRECT
 # -----------------------------------
