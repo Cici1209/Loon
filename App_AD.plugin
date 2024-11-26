@@ -1,5 +1,5 @@
-#!name=App_AD Collection 
-#!desc=合集：彩云天气、淘宝、美图秀秀、阿里云盘
+#!name=App_AD Collection
+#!desc=合集：阿里云盘、Spotify
 #!author=Cici_WongYS
 
 [Rule]
@@ -10,11 +10,40 @@ IP-CIDR,203.107.1.1/24,REJECT,no-resolve
 # 阿里云盘
 ^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle reject-dict
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
+
+# Spotify
+^https:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize$ header-del if-none-match
+
 [Script]
 http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets) script-path=https://kelee.one/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true, tag=移除阿里云盘广告
 http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path=https://kelee.one/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true, tag=移除阿里云盘广告
 
+# Spotify
+# > 解锁&去广告
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/yangsijianjian/yang/refs/heads/main/spotify/spotify-json.js, timeout=10, tag=spotifyJson
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/yangsijianjian/yang/refs/heads/main/spotify/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotifyProto
+
+[rewrite_local]
+# Spotify
+# > 歌词翻译
+# DualSubs.Spotify.Tracks.response
+^https?:\/\/api\.spotify\.com\/v1\/tracks\? url script-response-body https://raw.githubusercontent.com/yangsijianjian/yang/refs/heads/main/spotify/response.bundle.js
+
+# DualSubs.Spotify.Lyrics.request
+^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*) url script-request-body https://raw.githubusercontent.com/yangsijianjian/yang/refs/heads/main/spotify/response.bundle.js
+
+# DualSubs.Spotify.Translate.Lyrics.response
+^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/yangsijianjian/yang/refs/heads/main/spotify/response.bundle.js
+
+# DualSubs.Spotify.External.Lyrics.response
+^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)subtype=External url script-response-body https://raw.githubusercontent.com/yangsijianjian/yang/refs/heads/main/spotify/response.bundle.js
+
+# DualSubs.Spotify.Transcript-read-along.Translate.response.proto
+^https?:\/\/spclient\.wg\.spotify\.com\/transcript-read-along\/v2\/episode\/\w+ url script-response-body https://raw.githubusercontent.com/yangsijianjian/yang/refs/heads/main/spotify/DualSubsTranscriptsTranslateresponse.js
+# DualSubs.Spotify.Episode-transcripts.Translate.response.proto
+^https?:\/\/episode-transcripts\.spotifycdn\.com\/1\.0\/spotify:transcript:\w+ url script-response-body https://raw.githubusercontent.com/yangsijianjian/yang/refs/heads/main/spotify/DualSubsTranscriptsTranslateresponse.js
+
 [Plugin]
 
 [MITM]
-hostname = api.alipan.com, member.alipan.com, bizapi.alipan.com
+hostname = api.alipan.com, member.alipan.com, bizapi.alipan.com, spclient.wg.spotify.com, episode-transcripts.spotifycdn.com, api.spotify.com, spclient.wg.spotify.com
