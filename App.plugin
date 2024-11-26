@@ -48,9 +48,9 @@ DOMAIN,sky.ash.wf,DIRECT
 DOMAIN-SUFFIX,.cn,DIRECT
 
 # GEOIP 不作DNS解析
-GEOIP,CN,DIRECT,no-resolve
+GEOIP, CN, DIRECT, no-resolve
 
-GEOIP,CN,DIRECT
+GEOIP, CN, DIRECT
 # -----------------------------------
 # AI
 # > ChatGPT
