@@ -1,5 +1,5 @@
-#!name=App Collection
-#!desc=软件合集：iRingo合集、屏蔽IOS更新、小红书、ASH VPN、GEOIP、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、TikTok、部分网站
+#!name=Rule Collection
+#!desc=规则合集：iRingo合集、屏蔽IOS更新、小红书、ASH VPN、GEOIP、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、TikTok、部分网站
 #!author=Cici_WongYS
 
 [Rule]
