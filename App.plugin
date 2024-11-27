@@ -1,5 +1,5 @@
 #!name=App Collection
-#!desc=软件合集
+#!desc=软件合集：iRingo合集、屏蔽IOS更新、小红书、ASH VPN、GEOIP、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、TikTok、部分网站
 #!author=Cici_WongYS
 
 [Rule]
@@ -31,7 +31,7 @@ DOMAIN-SUFFIX,api-*.smoot.apple.com,DIRECT
 # 全球拦截
 AND,((OR,((PROTOCOL,UDP), (PROTOCOL,QUIC))), (DEST-PORT,443)),REJECT-NO-DROP
 
-# > 屏蔽iOS更新
+# > 屏蔽IOS更新
 DOMAIN,gdmf.apple.com,REJECT
 DOMAIN,xp.apple.com,REJECT
 
