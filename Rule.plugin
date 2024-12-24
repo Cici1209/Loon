@@ -1,32 +1,10 @@
 #!name=Rule Collection
-#!desc=规则合集：iRingo合集、屏蔽IOS更新、小红书、ASH VPN、GEOIP、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、TikTok、部分网站、微信防转圈圈
+#!desc=规则合集：屏蔽IOS更新、小红书、ASH VPN、GEOIP、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、TikTok、部分网站、微信防转圈圈
 #!author=Cici_WongYS
 
 [Rule]
 # -----------------------------------
-# 薯条插件
-# > iRingo：Location
-DOMAIN,gspe1-ssl.ls.apple.com,DIRECT
 
-# > iRingo：Maps
-DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
-DOMAIN,dispatcher.is.autonavi.com,DIRECT
-DOMAIN,direction2.is.autonavi.com,DIRECT
-DOMAIN,configuration.ls.apple.com,DIRECT
-DOMAIN,gspe35-ssl.ls.apple.com,DIRECT
-
-# > iRingo：WeatherKit
-DOMAIN,weather-analytics-events.apple.com,REJECT-DROP
-DOMAIN-SUFFIX,tthr.apple.com,REJECT-DROP
-
-DOMAIN,api.caiyunapp.com,DIRECT
-DOMAIN,weatherkit.apple.com,DIRECT
-DOMAIN,weather-map2.apple.com,DIRECT
-
-# > iRingo：Siri
-DOMAIN,api2.smoot.apple.com,DIRECT
-DOMAIN,guzzoni.smoot.apple.com,DIRECT
-DOMAIN-SUFFIX,api-*.smoot.apple.com,DIRECT
 # -----------------------------------
 # 全球拦截
 # > 微信
