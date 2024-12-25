@@ -51,7 +51,8 @@ DOMAIN,dispatcher.is.autonavi.com,DIRECT
 DOMAIN,direction2.is.autonavi.com,DIRECT
 
 # 🌤 WeatherKit
-DOMAIN,weather-analytics-events.apple.com,REJECT-DROP
+DOMAIN,weather-analytics-events.apple.com,DIRECT
+#DOMAIN,weather-analytics-events.apple.com,REJECT-DROP
 DOMAIN-SUFFIX,tthr.apple.com,REJECT-DROP
 # -----------------------------------
 [Script]
