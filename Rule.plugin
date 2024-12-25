@@ -1,5 +1,5 @@
 #!name=Rule Collection
-#!desc=规则合集：屏蔽IOS更新、小红书、ASH VPN、云闪付、China直连、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、TikTok、部分网站、微信防转圈圈
+#!desc=规则合集：屏蔽IOS更新、小红书、ASH VPN、云闪付、China直连、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、部分网站
 #!author=Cici_WongYS
 
 [Rule]
@@ -7,17 +7,6 @@
 
 # -----------------------------------
 # 全球拦截
-# > 微信
-DOMAIN,dns.weixin.qq.com,REJECT
-DOMAIN,dns.weixin.qq.com.cn,REJECT
-IP-CIDR,42.81.232.18/32,REJECT,no-resolve
-IP-CIDR,42.187.182.106/32,REJECT,no-resolve
-IP-CIDR,42.187.182.123/32,REJECT,no-resolve
-IP-CIDR,42.187.184.154/32,REJECT,no-resolve
-IP-CIDR,123.151.54.50/32,REJECT,no-resolve
-IP-CIDR6,2402:4e00:1900:1700:0:9554:1ad9:c3a/128,REJECT,no-resolve
-IP-CIDR6,240e:928:1400:10::25/128,REJECT,no-resolve
-
 # > 屏蔽IOS更新
 DOMAIN,gdmf.apple.com,REJECT
 DOMAIN,xp.apple.com,REJECT
@@ -31851,21 +31840,6 @@ DOMAIN-SUFFIX,youtubekids.com,YouTube
 DOMAIN-SUFFIX,youtube-nocookie.com,YouTube
 DOMAIN-SUFFIX,yt.be,YouTube
 DOMAIN-SUFFIX,ytimg.com,YouTube
-# -----------------------------------
-# TikTok
-DOMAIN-SUFFIX,appsflyersdk.com,TikTok
-DOMAIN-SUFFIX,byteoversea.com,TikTok
-DOMAIN-SUFFIX,ibytedtos.com,TikTok
-DOMAIN-SUFFIX,ipstatp.com,TikTok
-DOMAIN-SUFFIX,muscdn.com,TikTok
-DOMAIN-SUFFIX,musical.ly,TikTok
-DOMAIN-SUFFIX,snapkit.com,TikTok
-DOMAIN-SUFFIX,tiktocdn.com,TikTok
-DOMAIN-SUFFIX,tiktok.com,TikTok
-DOMAIN-SUFFIX,tik-tokapi.com,TikTok
-DOMAIN-SUFFIX,tiktokcdn.com,TikTok
-DOMAIN-SUFFIX,tiktokv.com,TikTok
-DOMAIN-SUFFIX,tokapi.com,TikTok
 # -----------------------------------
 # GlobalMedia
 # -----------------------------------
