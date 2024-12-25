@@ -1,5 +1,5 @@
 #!name=Rule Collection
-#!desc=规则合集：屏蔽IOS更新、小红书、ASH VPN、云闪付、China直连、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、部分网站
+#!desc=规则合集：屏蔽IOS更新、ASH VPN、云闪付、China直连、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、部分网站
 #!author=Cici_WongYS
 
 [Rule]
@@ -33,7 +33,7 @@ DOMAIN-SUFFIX,unionpayintl.cn,DIRECT
 DOMAIN-SUFFIX,unionpayintl.com,DIRECT
 DOMAIN-SUFFIX,unionpaysecure.com,DIRECT
 
-# > China
+# > China直连
 DOMAIN-SUFFIX,cn,DIRECT
 DOMAIN-SUFFIX,ms,DIRECT
 DOMAIN-KEYWORD,.tmall.com,DIRECT
