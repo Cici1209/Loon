@@ -1,32 +1,10 @@
 #!name=Rule Collection
-#!desc=规则合集：NovaXNS、屏蔽IOS更新、ASH VPN、TapTap、中国银联、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、沉浸式翻译、部分网站
+#!desc=规则合集：屏蔽IOS更新、ASH VPN、TapTap、中国银联、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、沉浸式翻译、部分网站
 #!author=Cici_WongYS
 
 [Rule]
 # -----------------------------------
-# NovaXNS
-# > NovaXNS_Domain_Collection
-DOMAIN-SUFFIX,ecs-api.xns.one,DIRECT
-DOMAIN-SUFFIX,beta.xns.one,NovaXNS
-DOMAIN-SUFFIX,kahkee.xns.one,NovaXNS
-DOMAIN-SUFFIX,raito.xns.one,NovaXNS
-DOMAIN-SUFFIX,pro.xns.one,NovaXNS
-DOMAIN-SUFFIX,novaxns.one,NovaXNS
-DOMAIN-SUFFIX,xns.rodeo,NovaXNS
-DOMAIN-SUFFIX,xns.my.id,NovaXNS
-DOMAIN-SUFFIX,nxns.link,NovaXNS
-DOMAIN-SUFFIX,xns.one,NovaXNS
-DOMAIN-SUFFIX,hcaptcha.com,NovaXNS
-DOMAIN-SUFFIX,skypack.dev,NovaXNS
 
-# > NovaXNS@IPV4
-IP-CIDR,8.217.246.48/32,NovaXNS,no-resolve
-IP-CIDR,45.249.245.247/32,NovaXNS,no-resolve
-IP-CIDR,172.93.220.162/32,NovaXNS,no-resolve
-IP-CIDR,206.237.31.237/32,NovaXNS,no-resolve
-IP-CIDR,103.150.8.98/32,NovaXNS,no-resolve
-IP-CIDR,45.141.139.16/32,NovaXNS,no-resolve
-IP-CIDR,148.178.21.17/32,NovaXNS,no-resolve
 # -----------------------------------
 # 全球拦截
 # > 屏蔽IOS更新
@@ -35,7 +13,7 @@ DOMAIN,xp.apple.com,REJECT
 # -----------------------------------
 # 全球直连
 # > ASH VPN
-DOMAIN,sky.ash.wf,DIRECT
+DOMAIN,air.ash.yt,DIRECT
 
 # > TapTap
 DOMAIN-SUFFIX,tapimg.com,DIRECT
