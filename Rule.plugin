@@ -1,5 +1,5 @@
 #!name=Rule Collection
-#!desc=规则合集：屏蔽IOS更新、ASH VPN、云闪付、China直连、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、部分网站
+#!desc=规则合集：屏蔽IOS更新、ASH VPN、云闪付、China直连、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、沉浸式翻译、部分网站
 #!author=Cici_WongYS
 
 [Rule]
@@ -31844,9 +31844,10 @@ DOMAIN-SUFFIX,ytimg.com,YouTube
 # GlobalMedia
 # -----------------------------------
 # Global
-# > 可莉插件
+# > 沉浸式翻译
+DOMAIN-SUFFIX,immersivetranslate.com,Global
+# > 可莉主页
 DOMAIN-SUFFIX,kelee.one,Global
-
-# > 网站 whois
+# > 网站whois
 DOMAIN,www.whois.com,Global
 # -----------------------------------
