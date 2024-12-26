@@ -89,4 +89,4 @@ http-request ^https?:\/\/(api-.+)\.smoot\.apple\.com\/apple\.parsec\.spotlight\.
 # -----------------------------------
 [MITM]
 #hostname = gspe1-ssl.ls.apple.com, configuration.ls.apple.com, gspe35-ssl.ls.apple.com, weatherkit.apple.com, guzzoni.smoot.apple.com, api2.smoot.apple.com, api-*.smoot.apple.com
-hostname = %APPEND% guzzoni.smoot.apple.com, api2.smoot.apple.com, api-*.smoot.apple.com, api*.smoot.apple.com,api.smoot.apple.cn, gspe1-ssl.ls.apple.com, configuration.ls.apple.com, gspe35-ssl.ls.apple.com, weatherkit.apple.com
+hostname = guzzoni.smoot.apple.com, api2.smoot.apple.com, api-*.smoot.apple.com, api*.smoot.apple.com,api.smoot.apple.cn, gspe1-ssl.ls.apple.com, configuration.ls.apple.com, gspe35-ssl.ls.apple.com, weatherkit.apple.com
