@@ -122,7 +122,6 @@ IP-CIDR, 64.23.132.171/32, AI, no-resolve
 # -----------------------------------
 # Apple
 # > Apple_Collection
-DOMAIN-SUFFIX,account.apple.com,DIRECT
 DOMAIN,apple-relay.fastly-edge.com,Apple
 DOMAIN-SUFFIX,gateway.icloud.com,Apple
 DOMAIN,apple.comscoreresearch.com,Apple
