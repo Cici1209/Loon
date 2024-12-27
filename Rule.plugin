@@ -8,8 +8,8 @@
 # -----------------------------------
 # 全球拦截
 # > 屏蔽IOS更新
-DOMAIN,gdmf.apple.com,REJECT
-DOMAIN,xp.apple.com,REJECT
+#DOMAIN,gdmf.apple.com,REJECT
+#DOMAIN,xp.apple.com,REJECT
 # -----------------------------------
 # 全球直连
 # > ASH VPN
