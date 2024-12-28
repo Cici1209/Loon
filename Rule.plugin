@@ -162,6 +162,9 @@ USER-AGENT,Spotify*,Spotify
 # > Swiftgram
 DOMAIN-KEYWORD,swiftgram,Telegram
 
+# > Turrit
+DOMAIN-SUFFIX,iturrit.com,Telegram
+
 # > Telegram_Collection
 DOMAIN-SUFFIX,t.me,Telegram
 DOMAIN-SUFFIX,tdesktop.com,Telegram
