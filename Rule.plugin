@@ -1,5 +1,5 @@
 #!name=Rule Collection
-#!desc=规则合集：屏蔽IOS更新、ASH VPN、TapTap、中国银联、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、沉浸式翻译、部分网站
+#!desc=规则合集：屏蔽IOS更新、TapTap、中国银联、AI合集、Apple合集、Spotify、Telegram、GitHub、Bilibili、YouTube、ASH VPN、沉浸式翻译、可莉主页、网站Whois
 #!author=Cici_WongYS
 
 [Rule]
@@ -12,9 +12,6 @@
 #DOMAIN,xp.apple.com,REJECT
 # -----------------------------------
 # 全球直连
-# > ASH VPN
-DOMAIN,air.ash.yt,DIRECT
-
 # > TapTap
 DOMAIN-SUFFIX,tapimg.com,DIRECT
 
@@ -264,10 +261,12 @@ DOMAIN-SUFFIX,ytimg.com,YouTube
 # GlobalMedia
 # -----------------------------------
 # Global
+# > ASH VPN
+DOMAIN,air.ash.yt,Global
 # > 沉浸式翻译
 DOMAIN-SUFFIX,immersivetranslate.com,Global
 # > 可莉主页
 DOMAIN-SUFFIX,kelee.one,Global
-# > 网站whois
+# > 网站Whois
 DOMAIN,www.whois.com,Global
 # -----------------------------------
