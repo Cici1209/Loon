@@ -87,11 +87,6 @@ DOMAIN-SUFFIX, meta.ai, AI
 # > Perplexity
 DOMAIN-SUFFIX, perplexity.ai, AI
 
-# > Siri
-DOMAIN, apple-relay.apple.com, AI
-DOMAIN, apple-relay.cloudflare.com, AI
-DOMAIN, guzzoni.smoot.apple.com, AI(薯条插件有直连，测试ing）
-
 # > AI_Collection
 DOMAIN, browser-intake-datadoghq.com, AI
 DOMAIN, static.cloudflareinsights.com, AI
@@ -119,6 +114,11 @@ IP-CIDR, 64.23.132.171/32, AI, no-resolve
 # -----------------------------------
 # Apple
 DOMAIN,apple-relay.fastly-edge.com,Apple
+
+# > Siri
+DOMAIN, apple-relay.apple.com, Apple
+DOMAIN, apple-relay.cloudflare.com, Apple
+DOMAIN, guzzoni.smoot.apple.com, Apple
 # -----------------------------------
 # Swiftgram
 DOMAIN-KEYWORD,swiftgram,Telegram
