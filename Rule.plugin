@@ -89,7 +89,7 @@ DOMAIN-SUFFIX, perplexity.ai, AI
 
 # > Siri
 DOMAIN, apple-relay.apple.com, AI
-DOMAIN, apple-relay.cloudflare.com, AI(在DNS模块中cloudflare已包含）
+DOMAIN, apple-relay.cloudflare.com, AI
 DOMAIN, guzzoni.smoot.apple.com, AI(薯条插件有直连，测试ing）
 
 # > AI_Collection
