@@ -1,5 +1,5 @@
 #!name=Rule Collection
-#!desc=规则合集：屏蔽IOS更新、TapTap、中国银联、AI合集、Apple、Swiftgram、ASH VPN、沉浸式翻译、可莉主页、网站Whois
+#!desc=规则合集：屏蔽IOS更新、TapTap、中国银联、Apple、Swiftgram、ASH VPN、沉浸式翻译、可莉主页、网站Whois
 #!author=Cici_WongYS
 
 [Rule]
@@ -32,85 +32,6 @@ DOMAIN-SUFFIX,unionpay.net,DIRECT
 DOMAIN-SUFFIX,unionpayintl.cn,DIRECT
 DOMAIN-SUFFIX,unionpayintl.com,DIRECT
 DOMAIN-SUFFIX,unionpaysecure.com,DIRECT
-# -----------------------------------
-# AI
-# > ChatGPT
-AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-eastus-), (DOMAIN-KEYWORD, .webpubsub.azure.com)), AI
-DOMAIN, chat.openai.com.cdn.cloudflare.net, AI
-DOMAIN, o33249.ingest.sentry.io, AI
-DOMAIN, openaiapi-site.azureedge.net, AI
-DOMAIN, openaicom.imgix.net, AI
-DOMAIN, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net, AI
-DOMAIN, openaicomproductionae4b.blob.core.windows.net, AI
-DOMAIN, production-openaicom-storage.azureedge.net, AI
-DOMAIN-SUFFIX, ai.com, AI
-DOMAIN-SUFFIX, cdn.oaistatic.com, AI
-DOMAIN-SUFFIX, chatgpt.com, AI
-DOMAIN-SUFFIX, oaistatic.com, AI
-DOMAIN-SUFFIX, oaiusercontent.com, AI
-DOMAIN-SUFFIX, openai.com, AI
-
-# > Claude
-DOMAIN-SUFFIX, anthropic.com, AI
-DOMAIN-SUFFIX, claude.ai, AI
-IP-CIDR, 160.79.104.0/23, AI, no-resolve
-IP-CIDR6, 2607:6bc0::/48, AI, no-resolve
-
-# > Copilot
-DOMAIN, api.githubcopilot.com, AI
-DOMAIN, api.individual.githubcopilot.com, AI
-DOMAIN, copilot.microsoft.com, AI
-DOMAIN, copilot-proxy.githubusercontent.com, AI
-DOMAIN, sydney.bing.com, AI
-DOMAIN, www.bing.com, AI
-
-# > Gemini
-DOMAIN, ai.google.dev, AI
-DOMAIN, aida.googleapis.com, AI
-DOMAIN, aistudio.google.com, AI
-DOMAIN, alkalimakersuite-pa.clients6.google.com, AI
-DOMAIN, bard.google.com, AI
-DOMAIN, gemini.google.com, AI
-DOMAIN, generativelanguage.googleapis.com, AI
-DOMAIN, makersuite.google.com, AI
-DOMAIN, proactivebackend-pa.googleapis.com, AI
-DOMAIN-SUFFIX, gemini.google.com, AI
-
-# > JetBrains
-DOMAIN-SUFFIX, grazie.ai, AI
-DOMAIN-SUFFIX, grazie.aws.intellij.net, AI
-
-# > Meta
-DOMAIN, imagine.meta.com, AI
-DOMAIN-SUFFIX, meta.ai, AI
-
-# > Perplexity
-DOMAIN-SUFFIX, perplexity.ai, AI
-
-# > AI_Collection
-DOMAIN, browser-intake-datadoghq.com, AI
-DOMAIN, static.cloudflareinsights.com, AI
-DOMAIN-KEYWORD, chatgpt, AI
-DOMAIN-KEYWORD, openai, AI
-DOMAIN-SUFFIX, algolia.net, AI
-DOMAIN-SUFFIX, api.statsig.com, AI
-DOMAIN-SUFFIX, auth0.com, AI
-DOMAIN-SUFFIX, chatgpt.livekit.cloud, AI
-DOMAIN-SUFFIX, client-api.arkoselabs.com, AI
-DOMAIN-SUFFIX, events.statsigapi.net, AI
-DOMAIN-SUFFIX, featuregates.org, AI
-DOMAIN-SUFFIX, host.livekit.cloud, AI
-DOMAIN-SUFFIX, identrust.com, AI
-DOMAIN-SUFFIX, intercom.io, AI
-DOMAIN-SUFFIX, intercomcdn.com, AI
-DOMAIN-SUFFIX, launchdarkly.com, AI
-DOMAIN-SUFFIX, observeit.net, AI
-DOMAIN-SUFFIX, segment.io, AI
-DOMAIN-SUFFIX, sentry.io, AI
-DOMAIN-SUFFIX, stripe.com, AI
-DOMAIN-SUFFIX, turn.livekit.cloud, AI
-IP-CIDR, 24.199.123.28/32, AI, no-resolve
-IP-CIDR, 64.23.132.171/32, AI, no-resolve
 # -----------------------------------
 # Apple
 DOMAIN,apple-relay.fastly-edge.com,Apple
