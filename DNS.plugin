@@ -9,7 +9,6 @@ DOMAIN-SUFFIX,dns.alidns.com,DIRECT
 DOMAIN-SUFFIX,doh.pub,DIRECT
 
 # > NovaXNS_Domain_Collection
-DOMAIN-SUFFIX,ecs-api.xns.one,DIRECT
 DOMAIN-SUFFIX,beta.xns.one,NovaXNS
 DOMAIN-SUFFIX,kahkee.xns.one,NovaXNS
 DOMAIN-SUFFIX,raito.xns.one,NovaXNS
