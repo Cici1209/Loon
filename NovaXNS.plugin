@@ -6,8 +6,8 @@
 # -----------------------------------
 [Rule]
 # > NovaXNS_Domain_Collection
+DOMAIN,cdnjs.cloudflare.com,NovaXNS
 DOMAIN-SUFFIX,beta.xns.one,NovaXNS
-DOMAIN-SUFFIX,cdnjs.cloudflare.com,NovaXNS
 DOMAIN-SUFFIX,kahkee.xns.one,NovaXNS
 DOMAIN-SUFFIX,raito.xns.one,NovaXNS
 DOMAIN-SUFFIX,pro.xns.one,NovaXNS
@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,hcaptcha.com,NovaXNS
 DOMAIN-SUFFIX,skypack.dev,NovaXNS
 
 # > NovaXNS@IPV4
+IP-CIDR,8.210.25.124/32,NovaXNS,no-resolve
 IP-CIDR,8.217.246.48/32,NovaXNS,no-resolve
 IP-CIDR,45.249.245.247/32,NovaXNS,no-resolve
 IP-CIDR,172.93.220.162/32,NovaXNS,no-resolve
