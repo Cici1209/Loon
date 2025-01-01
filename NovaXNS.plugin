@@ -1,0 +1,29 @@
+#!name=NovaXNS
+#!desc=NovaXNS
+#!author=Cici_WongYS
+
+[General]
+# -----------------------------------
+[Rule]
+# > NovaXNS_Domain_Collection
+DOMAIN-SUFFIX,beta.xns.one,NovaXNS
+DOMAIN-SUFFIX,cdnjs.cloudflare.com,NovaXNS
+DOMAIN-SUFFIX,kahkee.xns.one,NovaXNS
+DOMAIN-SUFFIX,raito.xns.one,NovaXNS
+DOMAIN-SUFFIX,pro.xns.one,NovaXNS
+DOMAIN-SUFFIX,novaxns.one,NovaXNS
+DOMAIN-SUFFIX,xns.rodeo,NovaXNS
+DOMAIN-SUFFIX,xns.my.id,NovaXNS
+DOMAIN-SUFFIX,nxns.link,NovaXNS
+DOMAIN-SUFFIX,xns.one,NovaXNS
+DOMAIN-SUFFIX,hcaptcha.com,NovaXNS
+DOMAIN-SUFFIX,skypack.dev,NovaXNS
+
+# > NovaXNS@IPV4
+IP-CIDR,8.217.246.48/32,NovaXNS,no-resolve
+IP-CIDR,45.249.245.247/32,NovaXNS,no-resolve
+IP-CIDR,172.93.220.162/32,NovaXNS,no-resolve
+IP-CIDR,206.237.31.237/32,NovaXNS,no-resolve
+IP-CIDR,103.150.8.98/32,NovaXNS,no-resolve
+IP-CIDR,45.141.139.16/32,NovaXNS,no-resolve
+IP-CIDR,148.178.21.17/32,NovaXNS,no-resolve
