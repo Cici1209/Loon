@@ -3,7 +3,9 @@
 #!author=Cici_WongYS
 
 [General]
+# -----------------------------------
 [Rule]
+# -----------------------------------
 [Host]
 *13th.tech = server:system
 *423down.com = server:system
