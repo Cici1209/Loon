@@ -43,7 +43,6 @@ DOMAIN, guzzoni.smoot.apple.com, Apple
 # -----------------------------------
 # Swiftgram
 DOMAIN-KEYWORD,swiftgram,Telegram
-IP-CIDR,171.111.216.155/32,Telegram,no-resolve
 # -----------------------------------
 # GlobalMedia
 # -----------------------------------
