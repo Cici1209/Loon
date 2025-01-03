@@ -6,12 +6,13 @@
 # -----------------------------------
 [Rule]
 # > NovaXNS_Domain_Collection
-DOMAIN,cdnjs.cloudflare.com,NovaXNS
 DOMAIN-SUFFIX,beta.xns.one,NovaXNS
+DOMAIN-SUFFIX,cdnjs.cloudflare.com,NovaXNS
 DOMAIN-SUFFIX,kahkee.xns.one,NovaXNS
 DOMAIN-SUFFIX,raito.xns.one,NovaXNS
 DOMAIN-SUFFIX,pro.xns.one,NovaXNS
 DOMAIN-SUFFIX,novaxns.one,NovaXNS
+DOMAIN-SUFFIX,static.xns.one,NovaXNS
 DOMAIN-SUFFIX,xns.rodeo,NovaXNS
 DOMAIN-SUFFIX,xns.my.id,NovaXNS
 DOMAIN-SUFFIX,nxns.link,NovaXNS
