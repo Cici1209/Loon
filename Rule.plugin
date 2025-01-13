@@ -34,12 +34,12 @@ DOMAIN-SUFFIX,unionpayintl.com,DIRECT
 DOMAIN-SUFFIX,unionpaysecure.com,DIRECT
 # -----------------------------------
 # Apple
-DOMAIN,apple-relay.fastly-edge.com,Apple
+#DOMAIN,apple-relay.fastly-edge.com,Apple
 
 # > Siri
-DOMAIN, apple-relay.apple.com, Apple
-DOMAIN, apple-relay.cloudflare.com, Apple
-DOMAIN, guzzoni.smoot.apple.com, Apple
+#DOMAIN, apple-relay.apple.com, Apple
+#DOMAIN, apple-relay.cloudflare.com, Apple
+#DOMAIN, guzzoni.smoot.apple.com, Apple
 # -----------------------------------
 # Swiftgram
 DOMAIN-KEYWORD,swiftgram,Telegram
@@ -48,11 +48,11 @@ DOMAIN-KEYWORD,swiftgram,Telegram
 # -----------------------------------
 # Global
 # > ASH VPN
-DOMAIN,air.ash.yt,Global
+#DOMAIN,air.ash.yt,Global
 # > 沉浸式翻译
-DOMAIN-SUFFIX,immersivetranslate.com,Global
+#DOMAIN-SUFFIX,immersivetranslate.com,Global
 # > 可莉主页
-DOMAIN-SUFFIX,kelee.one,Global
+#DOMAIN-SUFFIX,kelee.one,Global
 # > 网站Whois
-DOMAIN,www.whois.com,Global
+#DOMAIN,www.whois.com,Global
 # -----------------------------------
