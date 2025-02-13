@@ -6,20 +6,19 @@
 # -----------------------------------
 [Rule]
 # > NovaXNS_Domain_Collection
-USER-AGENT,123,PROXY
-DOMAIN-SUFFIX,beta.xns.one,DIRECT
-DOMAIN-SUFFIX,cdnjs.cloudflare.com,DIRECT
-DOMAIN-SUFFIX,kahkee.xns.one,DIRECT
-DOMAIN-SUFFIX,raito.xns.one,DIRECT
-DOMAIN-SUFFIX,pro.xns.one,DIRECT
-DOMAIN-SUFFIX,novaxns.one,DIRECT
-DOMAIN-SUFFIX,static.xns.one,DIRECT
-DOMAIN-SUFFIX,xns.rodeo,DIRECT
-DOMAIN-SUFFIX,xns.my.id,DIRECT
-DOMAIN-SUFFIX,nxns.link,DIRECT
-DOMAIN-SUFFIX,xns.one,DIRECT
-DOMAIN-SUFFIX,hcaptcha.com,DIRECT
-DOMAIN-SUFFIX,skypack.dev,DIRECT
+USER-AGENT,beta.xns.one,PROXY
+USER-AGENT,cdnjs.cloudflare.com,PROXY
+USER-AGENT,kahkee.xns.one,PROXY
+USER-AGENT,raito.xns.one,PROXY
+USER-AGENT,pro.xns.one,PROXY
+USER-AGENT,novaxns.one,PROXY
+USER-AGENT,static.xns.one,PROXY
+USER-AGENT,xns.rodeo,PROXY
+USER-AGENT,xns.my.id,PROXY
+USER-AGENT,nxns.link,PROXY
+USER-AGENT,xns.one,PROXY
+USER-AGENT,hcaptcha.com,PROXY
+USER-AGENT,skypack.dev,PROXY
 
 # > NovaXNS@IPV4
 IP-CIDR,8.210.25.124/32,DIRECT,no-resolve
