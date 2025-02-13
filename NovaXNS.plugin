@@ -6,6 +6,7 @@
 # -----------------------------------
 [Rule]
 # > NovaXNS_Domain_Collection
+USER-AGENT,123,PROXY
 DOMAIN-SUFFIX,beta.xns.one,DIRECT
 DOMAIN-SUFFIX,cdnjs.cloudflare.com,DIRECT
 DOMAIN-SUFFIX,kahkee.xns.one,DIRECT
