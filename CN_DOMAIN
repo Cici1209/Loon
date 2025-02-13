@@ -1,0 +1,4 @@
+[General]
+
+[Rule]
+DOMAIN-SUFFIX,cn,DIRECT
