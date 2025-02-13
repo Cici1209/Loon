@@ -1,4 +1,1 @@
-[General]
-
-[Rule]
-DOMAIN-SUFFIX,cn,DIRECT
+DOMAIN-SUFFIX,cn
