@@ -55,43 +55,43 @@ xnhsuu18_enable = switch,true,false,tag=去除购物、tap标签
 xnhsuu19_enable = switch,true,false,tag=猜你想搜
 
 [SCRIPT]
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/note\/comment\/list\? script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/xiaohongshushud.js,requires-body=true,tag=移除小红书评论区水印,enable={xnhsuu1_enable}
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/note\/comment\/list\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=移除小红书评论区水印,enable={xnhsuu1_enable}
 
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/interaction\/comment\/video\/download\? script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/xiaohongshushud.js,requires-body=true,tag=移除小红书评论区li ve水印,enable={xnhsuu2_enable}
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/interaction\/comment\/video\/download\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=移除小红书评论区li ve水印,enable={xnhsuu2_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/tabfeed script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=热门视频流,enable={xnhsuu3_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/tabfeed script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=热门视频流,enable={xnhsuu3_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/video\/save script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=视频保存,enable={xnhsuu4_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/video\/save script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=视频保存,enable={xnhsuu4_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/comment\/list script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=评论区图片处理,enable={xnhsuu5_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/comment\/list script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=评论区图片处理,enable={xnhsuu5_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/live_photo\/save script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=live去水印,enable={xnhsuu6_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/live_photo\/save script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=live去水印,enable={xnhsuu6_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\? script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=搜索推荐去广告,enable={xnhsuu7_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=搜索推荐去广告,enable={xnhsuu7_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/widgets script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=视频播放页商品推广,enable={xnhsuu8_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/widgets script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=视频播放页商品推广,enable={xnhsuu8_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/redtube\? script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=短视频去水印,enable={xnhsuu9_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/redtube\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=短视频去水印,enable={xnhsuu9_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/videofeed\? script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=视频流去水印,enable={xnhsuu10_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/videofeed\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=视频流去水印,enable={xnhsuu10_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/feed\? script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=信息流图片去水印,enable={xnhsuu11_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/feed\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=信息流图片去水印,enable={xnhsuu11_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/imagefeed script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=信息流图片去水印,enable={xnhsuu12_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/imagefeed script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=信息流图片去水印,enable={xnhsuu12_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=去开屏广告,enable={xnhsuu13_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=去开屏广告,enable={xnhsuu13_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\? script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=首页瀑布流,enable={xnhsuu14_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=首页瀑布流,enable={xnhsuu14_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\? script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=启动处理,enable={xnhsuu15_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=启动处理,enable={xnhsuu15_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/hot_list script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=热搜发现,enable={xnhsuu16_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/hot_list script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=热搜发现,enable={xnhsuu16_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/hint script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=默认填词,enable={xnhsuu17_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/hint script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=默认填词,enable={xnhsuu17_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\/categories script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=去除购物,enable={xnhsuu18_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\/categories script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=去除购物,enable={xnhsuu18_enable}
 
-http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/trending script-path=https://raw.githubusercontent.com/yangsijianjian/yangsijian/refs/heads/main/xiaohongshu/redbook.js,requires-body=true,tag=猜你想搜,enable={xnhsuu19_enable}
+http-response ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/trending script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/redbook_json.js,requires-body=true,tag=猜你想搜,enable={xnhsuu19_enable}
 
 [MITM]
 hostname = *.xiaohongshu.com,edith.xiaohongshu.com, rec.xiaohongshu.com, www.xiaohongshu.com
