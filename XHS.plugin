@@ -1,4 +1,5 @@
 #!name=小红书去广告
+#!desc=小红书去广告
 
 [RULE]
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
