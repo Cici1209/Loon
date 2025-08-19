@@ -1,131 +1,55 @@
-#!name=微信防转圈保活
+#!name=WeChat分流
 
 [Rule]
-# ====== 核心微信直连（防转圈 + 降延迟）======
-DOMAIN,mp.weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,wx.qq.com,DIRECT
-DOMAIN-SUFFIX,wxapp.qq.com,DIRECT
-DOMAIN-SUFFIX,open.weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,res.wx.qq.com,DIRECT
+DOMAIN,epay.ahrcu.com,PROXY
+DOMAIN,mixpay.wechat.com,PROXY
 
-# ====== 消息推送 / 实时通信（低延迟关键）======
-# 消息推送
-DOMAIN-SUFFIX,long.weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,short.weixin.qq.com,DIRECT
-# 语音通话
-DOMAIN-SUFFIX,voice.weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,wxavs.qq.com,DIRECT
-# 视频通话/直播
-DOMAIN-SUFFIX,webrtc.weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,liveplay.myqcloud.com,DIRECT
-DOMAIN-SUFFIX,liveplay.video.qq.com,DIRECT
-# UDP 直连（腾讯云）
-DOMAIN-SUFFIX,qcloud.com,DIRECT
-DOMAIN-SUFFIX,myqcloud.com,DIRECT
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,PROXY
+DOMAIN,btrace.qq.com,PROXY
+DOMAIN,dldir1.qq.com,PROXY
+DOMAIN,wxapp.tc.qq.com,PROXY
+DOMAIN,wx.tenpay.com,PROXY
+DOMAIN,dl.wechat.com,PROXY
+DOMAIN,sgfindershort.wechat.com,PROXY
+DOMAIN,sgilinkshort.wechat.com,PROXY
+DOMAIN,sglong.wechat.com,PROXY
+DOMAIN,sgminorshort.wechat.com,PROXY
+DOMAIN,sgquic.wechat.com,PROXY
+DOMAIN,sgshort.wechat.com,PROXY
+DOMAIN,tencentmap.wechat.com,PROXY
+DOMAIN,slife.xy-asia.com,PROXY
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,PROXY
+DOMAIN,soup.v.qq.com,PROXY
+DOMAIN,vweixinf.tc.qq.com,PROXY
+DOMAIN,weixin110.qq.com,PROXY
+DOMAIN,wup.imtt.qq.com,PROXY
 
-# ====== 文件传输 ======
-DOMAIN-SUFFIX,file.wx.qq.com,DIRECT
-DOMAIN-SUFFIX,wework.qpic.cn,DIRECT
+DOMAIN-SUFFIX,iot-tencent.com,PROXY
+DOMAIN-SUFFIX,lbs.gtimg.com,PROXY
+DOMAIN-SUFFIX,map.qq.com,PROXY
+DOMAIN-SUFFIX,qlogo.cn,PROXY
+DOMAIN-SUFFIX,qpic.cn,PROXY
+DOMAIN-SUFFIX,servicewechat.com,PROXY
+DOMAIN-SUFFIX,tenpay.com,PROXY
+DOMAIN-SUFFIX,up-hl.3g.qq.com,PROXY
+DOMAIN-SUFFIX,vweixinthumb.tc.qq.com,PROXY
+DOMAIN-SUFFIX,wechat.com,PROXY
+DOMAIN-SUFFIX,wechatpay.com,PROXY
+DOMAIN-SUFFIX,wechatlegal.net,PROXY
+DOMAIN-SUFFIX,wechatos.net,PROXY
+DOMAIN-SUFFIX,weixin.com,PROXY
+DOMAIN-SUFFIX,weixin.qq.com,PROXY
+DOMAIN-SUFFIX,weixinbridge.com,PROXY
+DOMAIN-SUFFIX,weixinsxy.com,PROXY
+DOMAIN-SUFFIX,wx.gtimg.com,PROXY
+DOMAIN-SUFFIX,wx.qq.com,PROXY
+DOMAIN-SUFFIX,wxapp.tc.qq.com,PROXY
+DOMAIN-SUFFIX,wxs.qq.com,PROXY
+DOMAIN-SUFFIX,yun-hl.3g.qq.com,PROXY
 
-# ====== 短链 ======
-DOMAIN-SUFFIX,mmbizurl.cn,DIRECT
+DOMAIN-KEYWORD,wechatpay,PROXY
 
-# ====== 腾讯通用 CDN ======
-DOMAIN-SUFFIX,ugdtimg.com,DIRECT
-DOMAIN-SUFFIX,gtimg.cn,DIRECT
+USER-AGENT,MicroMessenger*,PROXY
+USER-AGENT,WeChat*,PROXY
 
-# 微信官方域名
-DOMAIN-SUFFIX,weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,mp.weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,res.wx.qq.com,DIRECT
-DOMAIN-SUFFIX,wechat.com,DIRECT
-DOMAIN-SUFFIX,weixin110.qq.com,DIRECT
-DOMAIN-SUFFIX,qq.com,DIRECT
-
-# 微信相关 IP 段（示例，请根据实际情况调整）
-IP-CIDR,14.17.0.0/16,DIRECT
-IP-CIDR,183.60.0.0/16,DIRECT
-IP-CIDR,111.13.0.0/16,DIRECT
-IP-CIDR,123.125.0.0/16,DIRECT
-
-# 你可以根据需要添加更多规则
-
-[Script]
-# 定时每5分钟执行一次
-cron "0 */2 * * *" script-name=KeepAlive.js, timeout=10, tag=微信定时保活
-
-[Script-Content]
-const KEEPALIVE_URLS = [
-  "https://mp.weixin.qq.com/",
-  "https://weixin.qq.com/",
-  "https://res.wx.qq.com/open/js/jweixin-1.6.0.js"
-];
-const TIMEOUT = 6000;
-const LOG = true;  // true 开启日志，false 关闭日志
-
-function httpGet(url) {
-  const startTime = Date.now();
-  return new Promise(resolve => {
-    function logResult(ok, status, error) {
-      const elapsed = Date.now() - startTime;
-      if (LOG) {
-        if (ok) {
-          console.log(`[微信保活] 请求成功: ${url} 状态: ${status} 耗时: ${elapsed}ms`);
-        } else {
-          console.log(`[微信保活] 请求失败: ${url} 状态: ${status || ""} 错误: ${error} 耗时: ${elapsed}ms`);
-        }
-      }
-    }
-    if (typeof $task !== "undefined" && $task.fetch) {
-      $task.fetch({ url, method: "GET", timeout: TIMEOUT }).then(resp => {
-        logResult(resp.statusCode >= 200 && resp.statusCode < 400, resp.statusCode);
-        resolve({ ok: resp.statusCode >= 200 && resp.statusCode < 400, status: resp.statusCode });
-      }).catch(e => {
-        logResult(false, null, e.toString());
-        resolve({ ok: false, error: e.toString() });
-      });
-    } else if (typeof $httpClient !== "undefined") {
-      $httpClient.get({ url, timeout: TIMEOUT }, (err, resp) => {
-        if (err) {
-          logResult(false, null, err.toString());
-          resolve({ ok: false, error: err.toString() });
-        } else {
-          logResult(resp.status >= 200 && resp.status < 400, resp.status);
-          resolve({ ok: resp.status >= 200 && resp.status < 400, status: resp.status });
-        }
-      });
-    } else {
-      fetch(url, { method: "GET", cache: "no-store", mode: "cors" }).then(resp => {
-        logResult(resp.status >= 200 && resp.status < 400, resp.status);
-        resolve({ ok: resp.status >= 200 && resp.status < 400, status: resp.status });
-      }).catch(e => {
-        logResult(false, null, e.toString());
-        resolve({ ok: false, error: e.toString() });
-      });
-    }
-  });
-}
-
-async function keepAlive(triggerType = "定时") {
-  if (LOG) console.log(`[微信保活] 开始执行 (${triggerType})`);
-  let successCount = 0;
-  for (const url of KEEPALIVE_URLS) {
-    const res = await httpGet(url);
-    if (res.ok) successCount++;
-  }
-  if (LOG) console.log(`[微信保活] 执行完成，成功请求数: ${successCount}/${KEEPALIVE_URLS.length}`);
-}
-
-const wechatUrlRegex = /^https?:\/\/(weixin\.qq\.com|mp\.weixin\.qq\.com)\/.+/i;
-
-(async () => {
-  if (typeof $request !== "undefined" && $request && $request.url && wechatUrlRegex.test($request.url)) {
-    if (LOG) console.log(`[微信即时保活] 触发请求 URL: ${$request.url}`);
-    await keepAlive("即时");
-    $done({});
-  } else {
-    await keepAlive("定时");
-    if (typeof $done === "function") $done({});
-  }
-})();
+IP-ASN,132203,PROXY,no-resolve
