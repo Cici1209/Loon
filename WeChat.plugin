@@ -1,4 +1,5 @@
 #!name=WeChat分流
+#!desc=WeChat分流
 
 [Rule]
 DOMAIN,epay.ahrcu.com,PROXY
