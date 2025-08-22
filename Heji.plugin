@@ -2,7 +2,6 @@
 #!desc=Facebook，Instagram，Threads，WhatsApp，Twitter(X)
 
 [Rule]
-# -----------------------------------
 # Facebook
 DOMAIN-SUFFIX,aboutfacebook.com,PROXY
 DOMAIN-SUFFIX,accessfacebookfromschool.com,PROXY
