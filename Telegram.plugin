@@ -2,8 +2,6 @@
 #!desc=Telegram
 
 [Rule]
-DOMAIN,api.imem.app,PROXY
-DOMAIN,api.swiftgram.app,PROXY
 DOMAIN-SUFFIX,cdn-telegram.org,PROXY
 DOMAIN-SUFFIX,comments.app,PROXY
 DOMAIN-SUFFIX,contest.com,PROXY
@@ -26,12 +24,18 @@ DOMAIN-SUFFIX,telesco.pe,PROXY
 DOMAIN-SUFFIX,tg.dev,PROXY
 DOMAIN-SUFFIX,tx.me,PROXY
 DOMAIN-SUFFIX,usercontent.dev,PROXY
+
+DOMAIN-KEYWORD,imem,PROXY
 DOMAIN-KEYWORD,nicegram,PROXY
+DOMAIN-KEYWORD,swiftgram,PROXY
+DOMAIN-KEYWORD,intentchat,PROXY
+
 IP-ASN,211157,PROXY,no-resolve
 IP-ASN,44907,PROXY,no-resolve
 IP-ASN,59930,PROXY,no-resolve
 IP-ASN,62014,PROXY,no-resolve
 IP-ASN,62041,PROXY,no-resolve
+
 IP-CIDR,109.239.140.0/24,PROXY,no-resolve
 IP-CIDR,149.154.160.0/20,PROXY,no-resolve
 IP-CIDR,5.28.192.0/18,PROXY,no-resolve
