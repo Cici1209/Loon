@@ -1,6 +1,30 @@
 #!name=MissAV
 #!desc=MissAV
 
+[Rule]  
+DOMAIN-SUFFIX,trackwilltrk.com,reject
+DOMAIN-SUFFIX,rmhfrtnd.com,reject
+DOMAIN-SUFFIX,video.ktkjmp.com,reject
+DOMAIN-SUFFIX,go.myavlive.com,reject
+DOMAIN-SUFFIX,gsjln04hd.com,reject
+DOMAIN-SUFFIX,creative.myavlive.com,reject
+DOMAIN-SUFFIX,creative.live.missav.com,reject
+DOMAIN-SUFFIX,cashewsforlife208.com,reject
+DOMAIN-SUFFIX,ingest.sentry,reject
+DOMAIN-SUFFIX,phloxsub73ulata.com,reject
+DOMAIN-SUFFIX,xxxjmp.com,reject
+DOMAIN-SUFFIX,pitrespite.com,reject
+DOMAIN-SUFFIX,alexametrics.com,reject
+DOMAIN-SUFFIX,designslicensedeep.com,reject
+DOMAIN-SUFFIX,a.bestcontentfood.top,reject
+DOMAIN-SUFFIX,tsyndicate.com,reject
+DOMAIN-SUFFIX,cashewsforlife208.com,reject
+DOMAIN-SUFFIX,e67repidwnfu7gcha.com,reject
+DOMAIN-SUFFIX,mc7clurd09pla4nrtat7ion.com,reject
+DOMAIN-SUFFIX,e67repidwnfu7gcha.com,reject
+DOMAIN-SUFFIX,wuzbhjpvsf.com,reject
+DOMAIN-SUFFIX,a.realsrv.com,reject
+
 [Rewrite]
 https://creative.live.missav.com/widgets/Spot/lib.js - reject
 
