@@ -1,3 +1,6 @@
+#!name=AD
+#!desc=拦截广告域名
+
 [Rule]
 # 拦截广告域名
 OR,((DOMAIN-KEYWORD,ads.), (DOMAIN-KEYWORD,ad.)),REJECT
