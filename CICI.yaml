@@ -1,0 +1,1037 @@
+ipv6: true
+http_port: 3080
+socks_port: 3090
+allow_external_connections: false
+vif_only: true
+hide_vpn_icon: false
+geoip_db_url: https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb
+asn_db_url: https://fastly.jsdelivr.net/gh/P3TERX/GeoLite.mmdb@download/GeoLite2-ASN.mmdb
+proxy_latency_test_url: http://www.apple.com/library/test/success.html
+direct_latency_test_url: http://connectivitycheck.platform.hicloud.com/generate_204
+compat_route: false
+include_all_networks: false
+vif_excluded_routes:
+- 255.255.255.255/32
+- 224.0.0.0/4
+- 203.0.113.0/24
+- 198.51.100.0/24
+- 192.88.99.0/24
+- 192.0.2.0/24
+- 192.0.0.0/24
+- 172.16.0.0/12
+- 169.254.0.0/16
+- 127.0.0.0/8
+- 100.64.0.0/10
+- 10.0.0.0/8
+- 192.168.0.0/16
+dns:
+  bootstrap:
+  - 223.5.5.5
+  - 119.29.29.29
+  upstreams:
+    AI:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://dns.google/dns-query
+    - https://dns.cloudflare.com/dns-query
+    谷歌:
+    - https://8.8.8.8/dns-query
+    - https://dns.google/dns-query
+    苹果:
+    - https://223.5.5.5/dns-query
+    - https://119.29.29.29/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    阿里:
+    - https://223.5.5.5/dns-query
+    - https://dns.alidns.com/dns-query
+    腾讯:
+    - https://119.29.29.29/dns-query
+    - https://doh.pub/dns-query
+    字节:
+    - 180.184.1.1
+    - 180.184.2.2
+    国内:
+    - https://223.5.5.5/dns-query
+    - https://119.29.29.29/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    国外:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://dns.google/dns-query
+    - https://dns.cloudflare.com/dns-query
+  forward:
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Cici1209/Loon/refs/heads/main/ASH.lsr
+      value: 国内
+      disabled: false
+  - proxy_rule_set:
+      match: https://kelee.one/Tool/Loon/Lsr/AI.lsr
+      value: AI
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/YouTube.lsr
+      value: 谷歌
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Google.lsr
+      value: 谷歌
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Apple.lsr
+      value: 苹果
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Alibaba.lsr
+      value: 阿里
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Tencent.lsr
+      value: 腾讯
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/DouYin.lsr
+      value: 字节
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/ChinaMax.lsr
+      value: 国内
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Global.lsr
+      value: 国外
+      disabled: false
+  - domain_wildcard:
+      match: '*'
+      value: 国外
+      disabled: false
+  public_ip_lookup_url: https://api.ip.sb/ip
+bypass_tunnel_proxy:
+- 10.0.0.0/8
+- 172.16.0.0/12
+- 192.168.0.0/16
+- e.crashlytics.com
+- localhost
+- '*.local'
+policy_groups:
+- external:
+    name: ⭐️国外组
+    type: load_balance
+    hidden: true
+- external:
+    name: ⚠️节点类
+    type: load_balance
+    hidden: true
+- select:
+    name: ASH
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ash(1).png
+    hidden: true
+- external:
+    name: 🌐 ASH全节点
+    type: select
+    urls:
+    - https://kejalrn7ffb572qu0jeb.671234.xyz/signal/channel/receiver?token=02e2325bc14c133fd894dd86be74d7f6
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ash(1).png
+    hidden: true
+- external:
+    name: 🌐 一元机场全节点
+    type: select
+    urls:
+    - https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=8c400f98546bca06e0e86ca49fff9d13
+    filter: 专线((?!一元机场|客户端).)*$
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/YiYuan.png
+    hidden: true
+- external:
+    name: ⭐️策略类
+    type: load_balance
+    hidden: true
+- external:
+    name: ✅ 入口直连
+    type: fallback
+    urls:
+    - https://kejalrn7ffb572qu0jeb.671234.xyz/signal/channel/receiver?token=02e2325bc14c133fd894dd86be74d7f6
+    filter: Direct
+    interval: 30
+    timeout: 3
+    block_quic: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/06jichang/ash(1).png
+    hidden: true
+- external:
+    name: 🇭🇰 香港策略(ASH)
+    type: fallback
+    urls:
+    - https://kejalrn7ffb572qu0jeb.671234.xyz/signal/channel/receiver?token=02e2325bc14c133fd894dd86be74d7f6
+    filter: 香港|HK((?!Direct).)*$
+    interval: 30
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    hidden: true
+- external:
+    name: 🇯🇵 日本策略(ASH)
+    type: fallback
+    urls:
+    - https://kejalrn7ffb572qu0jeb.671234.xyz/signal/channel/receiver?token=02e2325bc14c133fd894dd86be74d7f6
+    filter: 日本|JP((?!Direct).)*$
+    interval: 30
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    hidden: true
+- external:
+    name: 🇸🇬 新加坡策略(ASH)
+    type: fallback
+    urls:
+    - https://kejalrn7ffb572qu0jeb.671234.xyz/signal/channel/receiver?token=02e2325bc14c133fd894dd86be74d7f6
+    filter: 新加坡|SG((?!Direct).)*$
+    interval: 30
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    hidden: true
+- external:
+    name: 🇺🇸 美国策略(ASH)
+    type: fallback
+    urls:
+    - https://kejalrn7ffb572qu0jeb.671234.xyz/signal/channel/receiver?token=02e2325bc14c133fd894dd86be74d7f6
+    filter: 美国|US((?!Direct).)*$
+    interval: 30
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    hidden: true
+- external:
+    name: 🇭🇰 香港策略(一元机场)
+    type: fallback
+    urls:
+    - https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=8c400f98546bca06e0e86ca49fff9d13
+    filter: 香港((?!一元机场|客户端).)*$
+    interval: 30
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    hidden: true
+- external:
+    name: 🇯🇵 日本策略(一元机场)
+    type: fallback
+    urls:
+    - https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=8c400f98546bca06e0e86ca49fff9d13
+    filter: 日本((?!一元机场|客户端).)*$
+    interval: 30
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    hidden: true
+- external:
+    name: 🇸🇬 新加坡策略(一元机场)
+    type: fallback
+    urls:
+    - https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=8c400f98546bca06e0e86ca49fff9d13
+    filter: 新加坡((?!一元机场|客户端).)*$
+    interval: 30
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    hidden: true
+- external:
+    name: 🇺🇸 美国策略(一元机场)
+    type: fallback
+    urls:
+    - https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=8c400f98546bca06e0e86ca49fff9d13
+    filter: 美国((?!一元机场|客户端).)*$
+    interval: 30
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    hidden: true
+- select:
+    name: 🔴 拦截策略
+    policies:
+    - REJECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+    hidden: true
+- external:
+    name: 📞 特殊通信
+    type: load_balance
+    hidden: false
+- fallback:
+    name: Talkatone
+    policies:
+    - 🇺🇸 美国策略(ASH)
+    - 🇺🇸 美国策略(一元机场)
+    - 🇭🇰 香港策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Googlevoice.png
+    hidden: false
+- external:
+    name: 🤖 AI / 智能服务
+    type: load_balance
+    hidden: false
+- fallback:
+    name: AI
+    policies:
+    - 🇯🇵 日本策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇺🇸 美国策略(ASH)
+    - 🇯🇵 日本策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - 🇺🇸 美国策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    block_quic: true
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChatGPT5.png
+    hidden: false
+- external:
+    name: 💬 社交 / 即时通讯
+    type: load_balance
+    hidden: false
+- fallback:
+    name: Discord
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
+    hidden: false
+- fallback:
+    name: Telegram
+    policies:
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(一元机场)
+    - 🇭🇰 香港策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
+    hidden: false
+- fallback:
+    name: WhatsApp
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/whatsapp(1).png
+    hidden: false
+- external:
+    name: 🌐 社交媒体 / 内容平台
+    type: load_balance
+    hidden: false
+- fallback:
+    name: Twitter/X
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Twitter.png
+    hidden: false
+- fallback:
+    name: Threads
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Threads.png
+    hidden: false
+- fallback:
+    name: Pinterest
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/redotpay.png
+    hidden: false
+- fallback:
+    name: Facebook
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
+    hidden: false
+- fallback:
+    name: Instagram
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Instagram.png
+    hidden: false
+- external:
+    name: 🎬 流媒体 / 娱乐
+    type: load_balance
+    hidden: false
+- fallback:
+    name: Spotify
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇯🇵 日本策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇯🇵 日本策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/spotify.png
+    hidden: false
+- fallback:
+    name: YouTube
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇯🇵 日本策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇯🇵 日本策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    block_quic: false
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/youtube.png
+    hidden: false
+- fallback:
+    name: 嗨皮漫画
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Unicorn.png
+    hidden: false
+- external:
+    name: 🔍 搜索 / 基础服务
+    type: load_balance
+    hidden: false
+- fallback:
+    name: Google
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇯🇵 日本策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - 🇯🇵 日本策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    block_quic: true
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
+    hidden: false
+- fallback:
+    name: Cloudflare
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    block_quic: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Cloudflare.png
+    hidden: false
+- external:
+    name: 💻 开发 / 技术服务
+    type: load_balance
+    hidden: false
+- fallback:
+    name: GitHub
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇯🇵 日本策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇯🇵 日本策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_00.png
+    hidden: false
+- external:
+    name: 🏢 企业服务
+    type: load_balance
+    hidden: false
+- fallback:
+    name: Microsoft
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇯🇵 日本策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇯🇵 日本策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png
+    hidden: false
+- external:
+    name: 🧰 工具 / 代理生态
+    type: load_balance
+    hidden: false
+- fallback:
+    name: Kelee
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Ywhl.png
+    hidden: false
+- fallback:
+    name: Sub-Store
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/substore.png
+    hidden: false
+- fallback:
+    name: Script-Hub
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Script-Hub.png
+    hidden: false
+- external:
+    name: 🌍 全局
+    type: load_balance
+    hidden: false
+- fallback:
+    name: 国外
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇯🇵 日本策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - 🇯🇵 日本策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Godetia.png
+    hidden: false
+- fallback:
+    name: 🟡 兜底策略
+    policies:
+    - 🇭🇰 香港策略(ASH)
+    - 🇸🇬 新加坡策略(ASH)
+    - 🇯🇵 日本策略(ASH)
+    - 🇭🇰 香港策略(一元机场)
+    - 🇸🇬 新加坡策略(一元机场)
+    - 🇯🇵 日本策略(一元机场)
+    - ✅ 入口直连
+    flatten: true
+    interval: 15
+    timeout: 2
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Egern.png
+    hidden: false
+- external:
+    name: ⭐️国内组
+    type: load_balance
+    hidden: true
+- external:
+    name: 🍎 系统服务
+    type: load_balance
+    hidden: true
+- select:
+    name: Apple
+    policies:
+    - DIRECT
+    - 🇭🇰 香港策略(ASH)
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
+    hidden: true
+- external:
+    name: 💬 社交 / 通讯
+    type: load_balance
+    hidden: true
+- select:
+    name: 微信
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeChat.png
+    hidden: true
+- external:
+    name: 🎬 内容 / 短视频
+    type: load_balance
+    hidden: true
+- select:
+    name: 抖音
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_2.png
+    hidden: true
+- select:
+    name: BiliBili
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
+    hidden: true
+- select:
+    name: 小红书
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/xiaohongshu(1).png
+    hidden: true
+- select:
+    name: 字节跳动
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_2.png
+    hidden: true
+- external:
+    name: 💰 支付 / 金融
+    type: load_balance
+    hidden: true
+- select:
+    name: 支付宝
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/alipay.png
+    hidden: true
+- select:
+    name: 中国银联
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/yunshanfu.png
+    hidden: true
+- external:
+    name: 🛒 电商 / 本地生活
+    type: load_balance
+    hidden: true
+- select:
+    name: 美团
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/meituan(1).png
+    hidden: true
+- select:
+    name: 拼多多
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png
+    hidden: true
+- select:
+    name: 阿里巴巴
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taobao(1).png
+    hidden: true
+- external:
+    name: 🏢 基础服务 / 云
+    type: load_balance
+    hidden: true
+- select:
+    name: 腾讯
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Tencent.png
+    hidden: true
+- select:
+    name: 百度
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/baidu.png
+    hidden: true
+- select:
+    name: 网易
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Mail.png
+    hidden: true
+- select:
+    name: 中国电信
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/dianxin.png
+    hidden: true
+- external:
+    name: 🗺️ 地图 / 出行
+    type: load_balance
+    hidden: true
+- select:
+    name: 高德地图
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GaodeMap.jpg
+    hidden: true
+- external:
+    name: 📦 本地网络
+    type: load_balance
+    hidden: true
+- select:
+    name: 局域网
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png
+    hidden: true
+- select:
+    name: 中国
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Muchang.png
+    hidden: true
+- select:
+    name: 🟢 直连策略
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
+    hidden: true
+rules:
+- rule_set:
+    match: https://raw.githubusercontent.com/Cici1209/Loon/refs/heads/main/ASH.lsr
+    policy: ASH
+    disabled: false
+- rule_set:
+    name: Talkatone
+    match: https://raw.githubusercontent.com/TimKerry/L-Rule/refs/heads/main/Talkatone.lsr
+    policy: Talkatone
+    disabled: false
+- rule_set:
+    name: AI
+    match: https://kelee.one/Tool/Loon/Lsr/AI.lsr
+    policy: AI
+    disabled: false
+- rule_set:
+    name: Telegram
+    match: https://rule.kelee.one/Loon/Telegram.lsr
+    policy: Telegram
+    disabled: false
+- rule_set:
+    name: Twitter
+    match: https://rule.kelee.one/Loon/Twitter.lsr
+    policy: Twitter/X
+    disabled: false
+- rule_set:
+    name: Threads
+    match: https://rule.kelee.one/Loon/Threads.lsr
+    policy: Threads
+    disabled: false
+- rule_set:
+    name: Instagram
+    match: https://rule.kelee.one/Loon/Instagram.lsr
+    policy: Instagram
+    disabled: false
+- rule_set:
+    name: Facebook
+    match: https://rule.kelee.one/Loon/Facebook.lsr
+    policy: Facebook
+    disabled: false
+- rule_set:
+    name: WhatsApp
+    match: https://rule.kelee.one/Loon/Whatsapp.lsr
+    policy: WhatsApp
+    disabled: false
+- rule_set:
+    name: GitHub
+    match: https://rule.kelee.one/Loon/GitHub.lsr
+    policy: GitHub
+    disabled: false
+- rule_set:
+    name: Spotify
+    match: https://rule.kelee.one/Loon/Spotify.lsr
+    policy: Spotify
+    disabled: false
+- rule_set:
+    name: Google
+    match: https://rule.kelee.one/Loon/Google.lsr
+    policy: Google
+    disabled: false
+- rule_set:
+    name: Discord
+    match: https://rule.kelee.one/Loon/Discord.lsr
+    policy: Discord
+    disabled: false
+- rule_set:
+    name: YouTube
+    match: https://rule.kelee.one/Loon/YouTube.lsr
+    policy: YouTube
+    disabled: false
+- rule_set:
+    name: Pinterest
+    match: https://rule.kelee.one/Loon/Pinterest.lsr
+    policy: Pinterest
+    disabled: false
+- rule_set:
+    name: Microsoft
+    match: https://rule.kelee.one/Loon/Microsoft.lsr
+    policy: Microsoft
+    disabled: false
+- rule_set:
+    name: Cloudflare
+    match: https://rule.kelee.one/Loon/Cloudflare.lsr
+    policy: Cloudflare
+    disabled: false
+- domain_keyword:
+    name: Kelee
+    match: kelee
+    policy: Kelee
+    disabled: false
+- domain_keyword:
+    name: Sub-Store
+    match: sub-store
+    policy: Sub-Store
+    disabled: false
+- domain_keyword:
+    name: Script-Hub
+    match: scripthub
+    policy: Script-Hub
+    disabled: false
+- domain_keyword:
+    name: 嗨皮漫画
+    match: happymh
+    policy: 嗨皮漫画
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Global.lsr
+    policy: 国外
+    disabled: false
+- rule_set:
+    name: Apple
+    match: https://rule.kelee.one/Loon/Apple.lsr
+    policy: Apple
+    disabled: false
+- rule_set:
+    name: BiliBili
+    match: https://rule.kelee.one/Loon/BiliBili.lsr
+    policy: BiliBili
+    disabled: false
+- rule_set:
+    name: 百度
+    match: https://rule.kelee.one/Loon/Baidu.lsr
+    policy: 百度
+    disabled: false
+- rule_set:
+    name: 微信
+    match: https://rule.kelee.one/Loon/WeChat.lsr
+    policy: 微信
+    disabled: false
+- rule_set:
+    name: 腾讯
+    match: https://rule.kelee.one/Loon/Tencent.lsr
+    policy: 腾讯
+    disabled: false
+- rule_set:
+    name: 抖音
+    match: https://rule.kelee.one/Loon/DouYin.lsr
+    policy: 抖音
+    disabled: false
+- rule_set:
+    name: 字节跳动
+    match: https://rule.kelee.one/Loon/ByteDance.lsr
+    policy: 字节跳动
+    disabled: false
+- rule_set:
+    name: 美团
+    match: https://rule.kelee.one/Loon/MeiTuan.lsr
+    policy: 美团
+    disabled: false
+- rule_set:
+    name: 网易
+    match: https://rule.kelee.one/Loon/NetEase.lsr
+    policy: 网易
+    disabled: false
+- rule_set:
+    name: 拼多多
+    match: https://rule.kelee.one/Loon/Pinduoduo.lsr
+    policy: 拼多多
+    disabled: false
+- rule_set:
+    name: 小红书
+    match: https://rule.kelee.one/Loon/XiaoHongShu.lsr
+    policy: 小红书
+    disabled: false
+- rule_set:
+    name: 支付宝
+    match: https://rule.kelee.one/Loon/AliPay.lsr
+    policy: 支付宝
+    disabled: false
+- rule_set:
+    name: 阿里巴巴
+    match: https://rule.kelee.one/Loon/Alibaba.lsr
+    policy: 阿里巴巴
+    disabled: false
+- rule_set:
+    name: 中国电信
+    match: https://rule.kelee.one/Loon/ChinaTelecom.lsr
+    policy: 中国电信
+    disabled: false
+- rule_set:
+    name: 中国银联
+    match: https://rule.kelee.one/Loon/UnionPay.lsr
+    policy: 中国银联
+    disabled: false
+- rule_set:
+    name: 高德地图
+    match: https://rule.kelee.one/Loon/GaoDe.lsr
+    policy: 高德地图
+    disabled: false
+- rule_set:
+    name: LAN
+    match: https://rule.kelee.one/Loon/Lan.lsr
+    policy: 局域网
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/ChinaMax.lsr
+    policy: 中国
+    disabled: false
+- geoip:
+    name: DIRECT
+    match: CN
+    policy: 🟢 直连策略
+    no_resolve: true
+    disabled: false
+- default:
+    name: 混水摸鱼
+    policy: 🟡 兜底策略
+scriptings:
+- generic:
+    name: 黄历
+    script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/HL.js
+- generic:
+    name: 机场订阅
+    script_url: https://raw.githubusercontent.com/jadkg/egern/refs/heads/main/机场订阅.js
+- generic:
+    name: 网络板块
+    script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/Network-Pro.js
+- generic:
+    name: 今日油价
+    script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/Youjia.js
+mitm:
+  ca_p12: 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
+  ca_passphrase: egern
+widgets:
+- name: 黄历
+  script_name: 黄历
+- name: 机场订阅
+  script_name: 机场订阅
+  env:
+    RESET1: '12'
+    URL1: https://dywebozmbm.1145145.com/signal/channel/receiver?token=02e2325bc14c133fd894dd86be74d7f6
+    NAME1: ASH
+- name: 网络板块
+  script_name: 网络板块
+- name: 今日油价
+  script_name: 今日油价
+  env:
+    region: guangdong/guangzhou
+modules:
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx/_end_/Block_HTTPDNS.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx/_end_/BlockAdvertisers.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx/_end_/Taobao_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx/_end_/RedPaper_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- name: MissAV
+  url: https://raw.githubusercontent.com/jadkg/egern/refs/heads/main/missav.module
+  enabled: true
+- url: https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx/_end_/Spotify_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/AliYunDrive_remove_ads.lpx/_end_/AliYunDrive_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx/_end_/BaiduNetDisk_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Baidu_input_method_remove_ads.lpx/_end_/Baidu_input_method_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: https://github.com/NSRingo/LocationService/releases/download/v1.0.1/iRingo.LocationService.sgmodule
+  enabled: true
+- url: https://github.com/NSRingo/Maps/releases/download/v4.5.1/iRingo.Maps.yaml
+  enabled: true
+- url: https://github.com/NSRingo/WeatherKit/releases/download/v4.0.0-beta3/iRingo.WeatherKit.yaml
+  compat_arguments:
+    AirQuality.Calculate.Algorithm: CN_DEATH_HK_AQHI
+  enabled: true
+- url: https://github.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.surge.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule
+  env:
+    PROXY: 🇭🇰 香港策略
+  enabled: true
+- url: http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0%E5%8E%BB%E5%B9%BF%E5%91%8A%40ddgksf2013+%E5%B7%B2%E6%8A%93%E5%8C%85400%E4%BD%99%E5%BA%94%E7%94%A8%E5%8E%BB%E5%BC%80%E5%B1%8F&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module&category=ddgksf2013
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/Q-Search.conf/_end_/Q-Search.sgmodule?type=qx-rewrite&n=Safari%E8%B6%85%E7%BA%A7%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA%40ddgksf2013+%E7%BF%BB%E8%AF%91%C2%B7%E7%A4%BE%E5%8C%BA%C2%B7%E8%B4%AD%E7%89%A9%C2%B7%E6%8D%A2%E5%8C%BA%C2%B7%E8%A7%86%E9%A2%91%C2%B7%E5%BC%95%E6%93%8E&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module&category=ddgksf2013
+  enabled: true
+- url: http://script.hub/file/_start_/https://ddgksf2013.top/module/Redirect2Swift.sgmodule/_end_/Redirect2Swift.sgmodule?type=surge-module&n=Swiftgram%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA%40ddgksf2013+TG%E5%A4%96%E9%93%BE%E6%8E%A5%E8%B7%B3%E8%BD%ACSwiftgram&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module&category=ddgksf2013
+  enabled: true
+- url: https://ddgksf2013.top/module/ScriptHub.Egern.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/158212892/QuantumultXMark/refs/heads/main/My/Egern/modules/pluginhub.yaml
+  enabled: true
+- url: https://raw.githubusercontent.com/obs1379/Egern/refs/heads/main/surge.qingr.moe_for_Egern.sgmodule
+  enabled: true
