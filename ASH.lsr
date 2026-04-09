@@ -1,6 +1,5 @@
 #!name=机场订阅更新
 
-// ASH
 DOMAIN-SUFFIX, ingest.sentry.io
 DOMAIN-SUFFIX, ash.wf
 DOMAIN-SUFFIX, ash.do
@@ -9,5 +8,4 @@ DOMAIN-SUFFIX, 671234.xyz
 DOMAIN-SUFFIX, fznfzn.cn
 DOMAIN-SUFFIX, flowaccess.org
 
-// 一元机场
 DOMAIN-SUFFIX, smallstrawberry.com
