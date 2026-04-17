@@ -1,0 +1,45 @@
+name: "综合面板小组件合集"
+description: "包含黄历、油价、网络信息"
+
+# --- 环境变量配置区 (已集成：黄历星座、油价地区) ---
+env_schema:
+  # 1. 黄历/日历配置
+  MY_ZODIAC:
+    name: 我的星座
+    description: "选填，例如：狮子座。不填则根据当前日期自动计算。"
+    default_value: ""
+    
+  # 2. 今日油价配置
+  GAS_REGION:
+    name: 油价地区代码
+    description: "请前往 m.qiyoujiage.com 查看，例如：guangdong/guangzhou"
+    default_value: "sichuan/chengdu"
+  SHOW_TREND:
+    name: 显示油价趋势
+    description: "是否显示本轮调价趋势，填写 true 或 false"
+    default_value: "true"
+
+# --- 脚本引入区 ---
+scriptings:
+  - generic:
+      name: 黄历信息-HL
+      script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/HL.js
+      
+  - generic:
+      name: 今日油价-Youjia
+      script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/Youjia.js
+      
+  - generic:
+      name: 网络高级-NetworkPro
+      script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/Network-Pro.js
+
+# --- 面板展示区 ---
+widgets:
+  - name: 黄历信息-HL
+    script_name: 黄历信息-HL
+    
+  - name: 今日油价-Youjia
+    script_name: 今日油价-Youjia
+    
+  - name: 网络高级-NetworkPro
+    script_name: 网络高级-NetworkPro
