@@ -1,37 +1,31 @@
 name: 社交服务合集
 description: 包含Discor,WhatsApp,Pinterest,Twitter,Instagram,Facebook,Talkatone
-rules:
-- rule_set:
+dns:
+  forward:
+  - proxy_rule_set:
     name: Discord
     match: https://rule.kelee.one/Loon/Discord.lsr
-    disabled: false
-- rule_set:
+
+  - proxy_rule_set:
     name: WhatsApp
     match: https://rule.kelee.one/Loon/Whatsapp.lsr
-    policy: 社交服务
-    disabled: false
-- rule_set:
+
+  - proxy_rule_set:
     name: Pinterest
     match: https://rule.kelee.one/Loon/Pinterest.lsr
-    policy: 社交服务
-    disabled: false
-- rule_set:
+
+  - proxy_rule_set:
     name: Twitter/X
     match: https://rule.kelee.one/Loon/Twitter.lsr
-    policy: 社交服务
-    disabled: false
-- rule_set:
+
+  - proxy_rule_set:
     name: Instagram
     match: https://rule.kelee.one/Loon/Instagram.lsr
-    policy: 社交服务
-    disabled: false
-- rule_set:
+
+  - proxy_rule_set:
     name: Facebook
     match: https://rule.kelee.one/Loon/Facebook.lsr
-    policy: 社交服务
-    disabled: false
-- rule_set:
+
+  - proxy_rule_set:
     name: Talkatone
     match: https://raw.githubusercontent.com/TimKerry/L-Rule/refs/heads/main/Talkatone.lsr
-    policy: 社交服务
-    disabled: false
