@@ -5,6 +5,8 @@ dns:
   - proxy_rule_set:
     name: Discord
     match: https://rule.kelee.one/Loon/XiaoHongShu.lsr
+    value: 测试
+    disabled: false
 
   - proxy_rule_set:
     name: WhatsApp
