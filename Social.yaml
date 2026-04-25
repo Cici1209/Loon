@@ -4,7 +4,7 @@ dns:
   forward:
   - proxy_rule_set:
     name: Discord
-    match: https://rule.kelee.one/Loon/Discord.lsr
+    match: https://rule.kelee.one/Loon/XiaoHongShu.lsr
 
   - proxy_rule_set:
     name: WhatsApp
