@@ -4,7 +4,6 @@ rules:
 - rule_set:
     name: Discord
     match: https://rule.kelee.one/Loon/Discord.lsr
-
     disabled: false
 - rule_set:
     name: WhatsApp
