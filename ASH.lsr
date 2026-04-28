@@ -1,6 +1,7 @@
 #!name=机场订阅更新
 
 DOMAIN-SUFFIX, ingest.sentry.io
+DOMAIN-SUFFIX, jwfq.com
 DOMAIN-SUFFIX, ash6.com
 DOMAIN-SUFFIX, ash.wf
 DOMAIN-SUFFIX, ash.do
